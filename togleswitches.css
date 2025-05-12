@@ -1,37 +1,1854 @@
-body {
-    background-image: linear-gradient(to right bottom, #000000, #150a0f, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc, #ffffff);
-    overflow: hidden;
-    margin: 0;
-    height: 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* From Uiverse.io by r7chardgh */
+/* The switch - the box around the slider */
+.switch_1 {
+    font-size: 17px;
     position: relative;
-}body {
-     background-image: linear-gradient(to right bottom, #000000, #150a0f, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc, #ffffff);
-     overflow: hidden;
-     margin: 0;
-     height: 100vh;
-     background-attachment: fixed;
-     background-repeat: no-repeat;
-     background-size: cover;
-     position: relative;
- }body {
-      background-image: linear-gradient(to right bottom, #000000, #150a0f, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc, #ffffff);
-      overflow: hidden;
-      margin: 0;
-      height: 100vh;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-  }body {
-       background-image: linear-gradient(to right bottom, #000000, #150a0f, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc, #ffffff);
-       overflow: hidden;
-       margin: 0;
-       height: 100vh;
-       background-attachment: fixed;
-       background-repeat: no-repeat;
-       background-size: cover;
-       position: relative;
-   }
+    display: inline-block;
+    width: 5em;
+    height: 2.5em;
+    user-select: none;
+}
+
+/* Hide default HTML checkbox */
+.switch_1 .cb {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #373737;
+    border-radius: 0.1em;
+    transition: 0.4s;
+    text-transform: uppercase;
+    font-weight: 700;
+    overflow: hidden;
+    box-shadow: -0.3em 0 0 0 #373737, -0.3em 0.3em 0 0 #373737,
+    0.3em 0 0 0 #373737, 0.3em 0.3em 0 0 #373737, 0 0.3em 0 0 #373737;
+}
+
+.toggle > .left {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: #f3f3f3;
+    color: #373737;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: right;
+    transform: rotateX(10deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.left::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(206, 206, 206);
+    transform-origin: center left;
+    transform: rotateY(90deg);
+}
+
+.left::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(112, 112, 112);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.toggle > .right {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 88%;
+    background-color: #f3f3f3;
+    color: rgb(206, 206, 206);
+    right: 1px;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform-origin: left;
+    transform: rotateX(10deg) rotateY(-45deg);
+    transform-style: preserve-3d;
+    transition: all 150ms;
+}
+
+.right::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(206, 206, 206);
+    transform-origin: center right;
+    transform: rotateY(-90deg);
+}
+
+.right::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(112, 112, 112);
+    transform-origin: center bottom;
+    transform: rotateX(90deg);
+}
+
+.switch_1 input:checked + .toggle > .left {
+    transform: rotateX(10deg) rotateY(45deg);
+    color: rgb(206, 206, 206);
+}
+
+.switch_1 input:checked + .toggle > .right {
+    transform: rotateX(10deg) rotateY(0deg);
+    color: #487bdb;
+}
+/* From Uiverse.io by Praashoo7 */
+/* The switch - the box around the slider */
+.switch_2 {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 1.2em;
+    height: 3.3em;
+}
+
+/* Hide default HTML checkbox */
+.switch_2 .chk {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 5px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: .5em;
+    width: 2.4em;
+    border-radius: 5px;
+    left: -0.6em;
+    top: 0.2em;
+    background-color: white;
+    box-shadow: 0 6px 7px rgba(0,0,0,0.3);
+    transition: .4s;
+}
+
+.slider:before, .slider:after {
+    content: "";
+    display: block;
+}
+
+.slider:after {
+    background: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.15) 0) 0 50% / 50% 100%,
+    repeating-linear-gradient(90deg,rgb(255, 255, 255) 0,rgb(255, 255, 255),rgb(255, 255, 255) 20%,rgb(255, 255, 255) 20%,rgb(255, 255, 255) 40%) 0 50% / 50% 100%,
+    radial-gradient(circle at 50% 50%,rgb(255, 255, 255) 25%, transparent 26%);
+    background-repeat: no-repeat;
+    border: 0.25em solid transparent;
+    border-left: 0.4em solid #ffffff;
+    border-right: 0 solid transparent;
+    transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    transform: translateX(-22.5%) rotate(90deg);
+    transform-origin: 25% 50%;
+    position: relative;
+    top: 0.5em;
+    left: 0.55em;
+    width: 2em;
+    height: 1em;
+    box-sizing: border-box;
+}
+
+.chk:checked + .slider {
+    background-color: limegreen;
+}
+
+.chk:focus + .slider {
+    box-shadow: 0 0 1px limegreen;
+}
+
+.chk:checked + .slider:before {
+    transform: translateY(2.3em);
+}
+
+.chk:checked + .slider:after {
+    transform: rotateZ(90deg) rotateY(180deg) translateY(0.45em) translateX(-1.4em);
+}
+.acontainera {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alabela {
+    background-color: transparent;
+    border: 2px solid rgb(91, 91, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 160px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 5px;
+    position: relative;
+}
+
+.alabela::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.alabela .ainputa {
+    display: none;
+}
+
+.alabela .atitlea {
+    font-size: 17px;
+    color: black;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 18px;
+    bottom: 14px;
+    text-align: center;
+}
+
+.alabela .atitlea:last-child {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.alabela .acirclea {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(91, 91, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.alabela .acirclea .aicona {
+    color: black;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+
+.alabela .acirclea .asquarea {
+    aspect-ratio: 1;
+    width: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+
+.alabela .acirclea::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3333a8;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s ease;
+}
+
+.alabela:has(.ainputa:checked) {
+    width: 57px;
+    animation: ainstalleda 0.4s ease 3.5s forwards;
+}
+
+.alabela:has(.ainputa:checked)::before {
+    animation: arotatea 3s ease-in-out 0.4s forwards;
+}
+
+.alabela .ainputa:checked + .acirclea {
+    animation: apulsea 1s forwards, acircleDeletea 0.2s ease 3.5s forwards;
+    rotate: 180deg;
+}
+
+.alabela .ainputa:checked + .acirclea::before {
+    animation: ainstallinga 3s ease-in-out forwards;
+}
+
+.alabela .ainputa:checked + .acirclea .aicona {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.alabela .ainputa:checked ~ .acirclea .asquarea {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alabela .ainputa:checked ~ .atitlea {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.alabela .ainputa:checked ~ .atitlea:last-child {
+    animation: ashowInstalledMessagea 0.4s ease 3.5s forwards;
+}
+
+@keyframes apulsea {
+    0% {
+        scale: 0.95;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        scale: 1;
+        box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+    100% {
+        scale: 0.95;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes ainstallinga {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes arotatea {
+    0% {
+        transform: rotate(-90deg) translate(27px) rotate(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    99% {
+        transform: rotate(270deg) translate(27px) rotate(270deg);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes ainstalleda {
+    100% {
+        width: 150px;
+        border-color: rgb(35, 174, 35);
+    }
+}
+
+@keyframes acircleDeletea {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes ashowInstalledMessagea {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        right: 56px;
+    }
+}
+/* From Uiverse.io by Galahhad */
+.theme-switch {
+    --toggle-size: 30px;
+    /* the size is adjusted using font-size,
+       this is not transform scale,
+       so you can choose any size */
+    --container-width: 5.625em;
+    --container-height: 2.5em;
+    --container-radius: 6.25em;
+    /* radius 0 - minecraft mode :) */
+    --container-light-bg: #3D7EAE;
+    --container-night-bg: #1D1F2C;
+    --circle-container-diameter: 3.375em;
+    --sun-moon-diameter: 2.125em;
+    --sun-bg: #ECCA2F;
+    --moon-bg: #C4C9D1;
+    --spot-color: #959DB1;
+    --circle-container-offset: calc((var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
+    --stars-color: #fff;
+    --clouds-color: #F3FDFF;
+    --back-clouds-color: #AACADF;
+    --transition: .5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
+}
+
+.theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--toggle-size);
+}
+
+.theme-switch__container {
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: var(--container-light-bg);
+    border-radius: var(--container-radius);
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+    box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    position: relative;
+}
+
+.theme-switch__container::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    -webkit-box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+    border-radius: var(--container-radius)
+}
+
+.theme-switch__checkbox {
+    display: none;
+}
+
+.theme-switch__circle-container {
+    width: var(--circle-container-diameter);
+    height: var(--circle-container-diameter);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: var(--circle-container-offset);
+    top: var(--circle-container-offset);
+    border-radius: var(--container-radius);
+    -webkit-box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: var(--circle-transition);
+    -o-transition: var(--circle-transition);
+    transition: var(--circle-transition);
+    pointer-events: none;
+}
+
+.theme-switch__sun-moon-container {
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+    width: var(--sun-moon-diameter);
+    height: var(--sun-moon-diameter);
+    margin: auto;
+    border-radius: var(--container-radius);
+    background-color: var(--sun-bg);
+    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+    -webkit-filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+.theme-switch__moon {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    background-color: var(--moon-bg);
+    border-radius: inherit;
+    -webkit-box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+    box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+    position: relative;
+}
+
+.theme-switch__spot {
+    position: absolute;
+    top: 0.75em;
+    left: 0.312em;
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: var(--container-radius);
+    background-color: var(--spot-color);
+    -webkit-box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+}
+
+.theme-switch__spot:nth-of-type(2) {
+    width: 0.375em;
+    height: 0.375em;
+    top: 0.937em;
+    left: 1.375em;
+}
+
+.theme-switch__spot:nth-last-of-type(3) {
+    width: 0.25em;
+    height: 0.25em;
+    top: 0.312em;
+    left: 0.812em;
+}
+
+.theme-switch__clouds {
+    width: 1.25em;
+    height: 1.25em;
+    background-color: var(--clouds-color);
+    border-radius: var(--container-radius);
+    position: absolute;
+    bottom: -0.625em;
+    left: 0.312em;
+    -webkit-box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
+    box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
+    -webkit-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    -o-transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+    transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+}
+
+.theme-switch__stars-container {
+    position: absolute;
+    color: var(--stars-color);
+    top: -100%;
+    left: 0.312em;
+    width: 2.75em;
+    height: auto;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
+
+/* actions */
+
+.theme-switch__checkbox:checked + .theme-switch__container {
+    background-color: var(--container-night-bg);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container:hover {
+    left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em)
+}
+
+.theme-switch__circle-container:hover {
+    left: calc(var(--circle-container-offset) + 0.187em);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__moon {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__clouds {
+    bottom: -4.062em;
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__stars-container {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* From Uiverse.io by vinodjangid07 */
+#aaloackaa {
+    display: none;
+}
+.aaloack-labela {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(80, 80, 80);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.aaloack-wrapperaa {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-10deg);
+}
+.aashacklea {
+    background-color: transparent;
+    height: 9px;
+    width: 14px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    transition: all 0.3s;
+}
+.aaloack-bodyaa {
+    width: 15px;
+}
+#aaloackaa:checked + .aaloack-labela .aaloack-wrapperaa .aashacklea {
+    transform: rotateY(150deg) translateX(3px);
+    transform-origin: right;
+}
+#aaloackaa:checked + .aaloack-labela {
+    background-color: rgb(167, 71, 245);
+}
+.aaloack-labela:active {
+    transform: scale(0.9);
+}
+/* From Uiverse.io by barisdogansutcu */
+.love-heart:before,#switch {
+    display: none;
+}
+
+.love-heart, .love-heart::after {
+    border-color: hsl(231deg 28% 86%);
+    border: 1px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+    height: 8px;
+    border-bottom: 0
+}
+
+.round {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: hsl(0deg 0% 100%);
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    border-radius: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+    animation: check-animation2 .5s forwards;
+}
+
+input:checked + label .round {
+    transform: translate(0px, 0px);
+    animation: check-animation .5s forwards;
+    background-color: hsl(0deg 0% 100%);
+}
+
+@keyframes check-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 7px);
+    }
+
+    100% {
+        transform: translate(7px, 7px);
+    }
+}
+
+@keyframes check-animation2 {
+    0% {
+        transform: translate(7px, 7px);
+    }
+
+    50% {
+        transform: translate(0px, 7px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.love-heart {
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+    display: block;
+    border-color: hsl(231deg 28% 86%);
+    cursor: pointer;
+    top: 0;
+}
+
+input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
+    border-color: hsl(347deg 81% 61%);
+    box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+}
+
+.love-heart::after, .love-heart .bottom {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-color: hsl(231deg 28% 86%);
+}
+
+.love-heart::after {
+    right: -9px;
+    transform: rotate(90deg);
+    top: 7px;
+}
+
+.love-heart .bottom {
+    width: 11px;
+    height: 11px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: hsl(231deg 28% 86%);
+    left: -1px;
+    top: 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+
+.label-checkaaa {
+    display: none;
+}
+
+.hamburger-labelaaa {
+    width: 70px;
+    height: 58px;
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-labelaaa div {
+    width: 70px;
+    height: 6px;
+    background-color: black;
+    position: absolute;
+}
+
+.line1aaa {
+    transition: all 0.3s;
+}
+
+.line2aaa {
+    margin: 18px 0 0 0;
+    transition: 0.3s;
+}
+
+.line3aaa {
+    margin: 36px 0 0 0;
+    transition: 0.3s;
+}
+
+#label-checkaaa:checked + .hamburger-labelaaa .line1aaa {
+    transform: rotate(35deg) scaleX(0.55) translate(39px, -4.5px);
+    border-radius: 50px 50px 50px 0;
+}
+
+#label-checkaaa:checked + .hamburger-labelaaa .line3aaa {
+    transform: rotate(-35deg) scaleX(0.55) translate(39px, 4.5px);
+    border-radius: 0 50px 50px 50px;
+}
+
+#label-checkaaa:checked + .hamburger-labelaaa .line2aaa {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 45px;
+}
+/* From Uiverse.io by MuhammadHasann */
+.toggle-cont {
+    width: 100px;
+    height: 50px;
+    border-radius: 9999px;
+}
+
+.toggle-cont .toggle-input {
+    display: none;
+}
+
+.toggle-cont .toggle-label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+    background: #272727;
+    border-radius: 9999px;
+    box-sizing: content-box;
+    box-shadow: 0px 0px 16px -8px #fefefe;
+}
+
+.toggle-cont .toggle-label .cont-label-play {
+    position: relative;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: #5e5e5e;
+    border-radius: 9999px;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.toggle-cont .toggle-input:checked + .toggle-label .cont-label-play {
+    background: #f43f5e;
+    transform: translateX(50px);
+}
+
+.toggle-cont .toggle-label .label-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    background: #fefefe;
+    border-radius: 4px;
+    clip-path: polygon(25% 0, 75% 50%, 25% 100%, 25% 51%);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.toggle-cont .toggle-input:checked + .toggle-label .label-play {
+    width: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+/* From Uiverse.io by Mohsinech */
+.toggleaaaa {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(1, 103, 255);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.toggleaaaa span {
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.toggleaaaa span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 25px;
+    left: 15px;
+}
+
+.toggleaaaa.toggleaaaa:hover span:nth-child(1) {
+    width: 40px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.125s;
+}
+
+.toggleaaaa span:nth-child(2) {
+    transform: translateY(15px);
+    width: 15px;
+    left: 15px;
+}
+
+.toggleaaaa.toggleaaaa:hover span:nth-child(2) {
+    width: 40px;
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: 0.125s;
+}
+
+.toggleaaaa:hover span:nth-child(3) {
+    transform: translateX(60px);
+}
+/* From Uiverse.io by barisdogansutcu */
+.bcontainer {
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 15px 10px 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    box-shadow: rgba(46, 46, 46, 0.2) 0px 8px 24px;
+    color: rgb(255, 255, 255);
+}
+
+#bfavorite {
+    display: none;
+}
+
+#bfavorite:checked + .bcontainer svg {
+    fill: hsl(0deg 100% 50%);
+    stroke: hsl(0deg 100% 50%);
+    animation: bheartButton 1s;
+}
+
+@keyframes bheartButton {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#bfavorite + .bcontainer .baction {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+}
+
+#bfavorite + .bcontainer .baction span {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    transition: all 0.5s;
+}
+
+#bfavorite + .bcontainer .baction span.boption-1 {
+    transform: translate(0px, 0%);
+    opacity: 1;
+}
+
+#bfavorite:checked + .bcontainer .baction span.boption-1 {
+    transform: translate(0px, -100%);
+    opacity: 0;
+}
+
+#bfavorite + .bcontainer .baction span.boption-2 {
+    transform: translate(0px, 100%);
+    opacity: 0;
+}
+
+#bfavorite:checked + .bcontainer .baction span.boption-2 {
+    transform: translate(0px, 0%);
+    opacity: 1;
+}
+/* From Uiverse.io by cbolson */
+.bbswitch {
+    --_switch-bg-clr: #70a9c5;
+    --_switch-padding: 4px;
+    --_slider-bg-clr: rgba(12, 74, 110, 0.65);
+    --_slider-bg-clr-on: rgba(12, 74, 110, 1);
+    --_slider-txt-clr: #ffffff;
+    --_label-padding: 1rem 2rem;
+    --_switch-easing: cubic-bezier(0.47, 1.64, 0.41, 0.8);
+    color: white;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    position: relative;
+    isolation: isolate;
+}
+
+.bbswitch input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.bbswitch > span {
+    display: grid;
+    place-content: center;
+    transition: opacity 300ms ease-in-out 150ms;
+    padding: var(--_label-padding);
+}
+
+.bbswitch::before,
+.bbswitch::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    transition: inset 150ms ease-in-out;
+}
+
+.bbswitch::before {
+    background-color: var(--_slider-bg-clr);
+    inset: var(--_switch-padding) 50% var(--_switch-padding) var(--_switch-padding);
+    transition:
+            inset 500ms var(--_switch-easing),
+            background-color 500ms ease-in-out;
+    z-index: -1;
+    box-shadow:
+            inset 0 1px 1px rgba(0, 0, 0, 0.3),
+            0 1px rgba(255, 255, 255, 0.3);
+}
+
+.bbswitch::after {
+    background-color: var(--_switch-bg-clr);
+    inset: 0;
+    z-index: -2;
+}
+
+.bbswitch:focus-within::after {
+    inset: -0.25rem;
+}
+
+.bbswitch:has(input:checked):hover > span:first-of-type,
+.bbswitch:has(input:not(:checked)):hover > span:last-of-type {
+    opacity: 1;
+    transition-delay: 0ms;
+    transition-duration: 100ms;
+}
+
+.bbswitch:has(input:checked):hover::before {
+    inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 45%;
+}
+
+.bbswitch:has(input:not(:checked)):hover::before {
+    inset: var(--_switch-padding) 45% var(--_switch-padding) var(--_switch-padding);
+}
+
+.bbswitch:has(input:checked)::before {
+    background-color: var(--_slider-bg-clr-on);
+    inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 50%;
+}
+
+.bbswitch > span:last-of-type,
+.bbswitch > input:checked + span:first-of-type {
+    opacity: 0.75;
+}
+
+.bbswitch > input:checked ~ span:last-of-type {
+    opacity: 1;
+}
+/* From Uiverse.io by Praashoo7 */
+.switchbbb {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.8em;
+    height: 3.8em;
+}
+
+.torchbbb {
+    margin-top: 0.9em;
+    margin-left: 0.95em;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg);
+}
+
+.sliderbbb .bbbbb {
+    position: relative;
+    top: -3.3em;
+    transform: rotate(270deg);
+}
+
+.sliderbbb .bling_85bbb {
+    stroke: black;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 3;
+    stroke-dashoffset: 15;
+    transition: all 0.3s ease;
+}
+
+/* Hide default HTML checkbox */
+.switchbbb input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.sliderbbb {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    border-radius: 50%;
+    background-color: black;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chk_85bbb:checked + .sliderbbb {
+    animation: tapbbb 0.3s linear forwards;
+    background-color: #FFA133;
+}
+
+.chk_85bbb:checked + .sliderbbb .bling_85bbb {
+    animation: bling_8561328bbb 0.3s linear forwards;
+    animation-delay: 0.2s;
+}
+
+.chk_85bbb:focus + .sliderbbb {
+    box-shadow: 0 0 1px #FFA133;
+}
+
+@keyframes bling_8561328bbb {
+    50% {
+        stroke-dasharray: 3;
+        stroke-dashoffset: 12;
+    }
+
+    100% {
+        stroke-dasharray: 3;
+        stroke-dashoffset: 9;
+    }
+}
+
+@keyframes tapbbb {
+    50% {
+        scale: 0.9;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+/* From Uiverse.io by simontheonlyone */
+.switchc {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 6em;
+    height: 6em;
+}
+
+.switchc input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sliderc {
+    inset: 0;
+    background-color: #333;
+    border-radius: 30px;
+}
+
+.sliderc:before {
+    height: 0.8em;
+    width: 1.1em;
+    inset: 44px 28px;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.batteryc {
+    height: 1.4em;
+    width: 2.9em;
+    inset: 39px 23px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+}
+
+.batteryc:before {
+    height: 0.4em;
+    width: 0.1em;
+    inset: 0.4em 50px;
+    border: none;
+    border-radius: 0% 100% 100% 0% / 0% 50% 50% 0%;
+    background: #eee;
+}
+
+.switchc input:checked + .sliderc {
+    background-color: #f3d5d5;
+    box-shadow: 0 0 1px #eee;
+}
+
+.switchc input:checked ~ .batteryc {
+    border: 2px solid #111;
+}
+
+.switchc input:checked ~ .batteryc:before {
+    background: #111;
+}
+
+.switchc input:checked + .sliderc:before {
+    background: rgb(255, 176, 85);
+    animation: lowbatteryc 1.6s linear;
+}
+
+@keyframes lowbatteryc {
+    0% {
+        width: 1.1em;
+    }
+    40% {
+        width: 2.3em;
+    }
+    70% {
+        width: 2.3em;
+    }
+    100% {
+        width: 1.1em;
+    }
+}
+
+.sliderc,
+.batteryc,
+.sliderc:before,
+.batteryc:before {
+    position: absolute;
+    content: "";
+    transition: 0.5s;
+}
+/* From Uiverse.io by KINGFRESS */
+/* Dark Mode Only ;) */
+
+/* The switch - the box around the slider */
+.switchcc {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: .5em;
+}
+
+/* Hide default HTML checkbox */
+.switchcc input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slidercc {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5B5B5B;
+    transition: .4s;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.slidercc .circlecc {
+    background-color: #212121;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+    transition: .4s;
+}
+
+.slidercc .circlecc::before {
+    position: absolute;
+    content: "";
+    height: 2.3em;
+    width: 2.3em;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(182, 182, 182);
+    transition: .4s;
+}
+
+.slidercc .circlecc::after {
+    content: '';
+    background-color: #212121;
+    height: 1.7em;
+    width: 1.7em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+input:checked + .slidercc .circlecc {
+    transform: translateX(2em);
+    transition: .4s;
+}
+
+input:checked + .slidercc .circlecc::before {
+    background-color: #e1e1e1;
+    transition: .4s;
+}
+
+input:checked + .slidercc .circlecc::after {
+    width: 0;
+    height: 0;
+    transition: .4s;
+}
+/* From Uiverse.io by vinodjangid07 */
+#checkboxccc {
+    display: none;
+}
+
+.switchccc {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(99, 99, 99);
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: rgb(37, 37, 37);
+    border: 2px solid rgb(126, 126, 126);
+    box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+
+.svgccc {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgccc path {
+    fill: rgb(37, 37, 37);
+}
+
+#checkboxccc:checked + .switchccc .svgccc {
+    filter: drop-shadow(0px 0px 3px rgb(222, 151, 255));
+}
+
+#checkboxccc:checked + .switchccc .svgccc path {
+    fill: rgb(255, 255, 255);
+}
+
+#checkboxccc:checked + .switchccc {
+    box-shadow: 0px 0px 1px rgb(222, 151, 255) inset,
+    0px 0px 2px rgb(222, 151, 255) inset,
+    0px 0px 10px rgb(222, 151, 255) inset,
+    0px 0px 40px rgb(222, 151, 255),
+    0px 0px 100px rgb(222, 151, 255),
+    0px 0px 5px rgb(222, 151, 255);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(152, 107, 172);
+    color: rgb(255, 255, 255);
+}
+/* From Uiverse.io by JaydipPrajapati1910 */
+.btn-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn-color-mode-switch {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner {
+    margin: 0px;
+    width: 140px;
+    height: 40px;
+    background-color: #fcce8a;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
+    content: attr(data-on);
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    top: 7px;
+    right: 20px;
+    color: #222;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
+    content: attr(data-off);
+    width: 70px;
+    height: 25px;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+    color: #222;
+    font-weight: 600;
+}
+
+.btn-color-mode-switch input[type="checkbox"] {
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner {
+    background-color: #fcce8a;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after {
+    content: attr(data-on);
+    left: 68px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before {
+    content: attr(data-off);
+    right: auto;
+    left: 20px;
+}
+/* From Uiverse.io by faxriddin20 */
+.toggleSwitchd {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+}
+
+#checkboxInputd {
+    display: none;
+}
+
+.belld {
+    width: 18px;
+}
+
+.belld path {
+    fill: white;
+}
+
+.speakerd {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.speakerd svg {
+    width: 18px;
+}
+
+.mute-speakerd {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 3;
+    transition-duration: 0.3s;
+}
+
+.mute-speakerd svg {
+    width: 18px;
+}
+
+#checkboxInputd:checked + .toggleSwitchd .speakerd {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+#checkboxInputd:checked + .toggleSwitchd .mute-speakerd {
+    opacity: 1;
+    transition-duration: 0.3s;
+    background-color: red;
+}
+
+#checkboxInputd:active + .toggleSwitchd {
+    transform: scale(0.7);
+}
+
+#checkboxInputd:hover + .toggleSwitchd {
+    background-color: rgb(61, 61, 61);
+}
+
+/* From Uiverse.io by pandey_saurav_ */
+#checkbox-inputdd {
+    display: none;
+}
+
+.switchdd {
+    width: fit-content;
+    padding: 10px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 50px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    transition: all 0.7s;
+}
+
+#checkbox-inputdd:checked + .switchdd {
+    background-color: rgb(161, 91, 0);
+    box-shadow: 0px 0px 100px rgb(255, 196, 0);
+}
+.containerddd {
+    height: 100%;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleddd {
+    height: 25%;
+    font-family: Cookie;
+    font-size: 48pt;
+    text-align: center;
+}
+
+.switchddd {
+    --cookie-size: 3em;
+    --outer-border: 0.5em;
+    --inner-border: 0.5em;
+    --border-color: #d8a04d;
+    --height: calc(var(--cookie-size) + (2 * (var(--outer-border) + var(--inner-border))));
+    --width: calc(var(--height) * 2);
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+}
+
+.switchddd input {
+    display: none;
+}
+
+.switchddd label {
+    cursor: pointer;
+}
+
+.switchddd input:checked ~ .cookieddd {
+    transform: translateX(calc(var(--width) / 2)) rotate(360deg);
+    color: #d8a04d;
+    background-color: currentColor;
+}
+
+.switchddd input:checked ~ .cookieddd span[class^="cookie-part-"],
+.switchddd input:checked ~ .cookieddd span[class^="chocolate-chips-"] {
+    transform: translate(0px, 0px);
+}
+
+.backgroundddd {
+    height: 100%;
+    border-radius: calc(var(--width) / 4);
+    border: var(--outer-border) solid var(--border-color);
+    background: linear-gradient(to right, #484848 0%,#202020 100%);
+}
+
+.cookieddd {
+    --chip-size: calc(var(--cookie-size) / 8);
+    --split-offset: calc(var(--cookie-size) / 24);
+    position: absolute;
+    top: calc(var(--outer-border) + var(--inner-border));
+    left: calc(var(--outer-border) + var(--inner-border));
+    width: var(--cookie-size);
+    height: var(--cookie-size);
+    border-radius: 50%;
+    transition: transform 1s linear;
+}
+
+.cookieddd span[class^="cookie-part-"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: #d8a04d;
+    background-color: currentColor;
+}
+
+.cookie-part-1ddd {
+    clip-path: polygon(0% 0%, 55% 0%, 52% 8%, 55% 10%, 55% 16%, 52% 19%, 52% 24%, 47% 26%, 45% 30%, 50% 33%, 47% 37%, 47% 42%, 51% 47%, 47% 49%, 40% 50%, 34% 50%, 30% 53%, 25% 53%, 20% 56%, 16% 56%, 14% 61%, 0% 60%);
+    transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * -1));
+}
+
+.cookie-part-2ddd {
+    clip-path: polygon(55% 0%, 100% 0%, 100% 72%, 88% 68%, 84% 61%, 78% 60%, 77% 56%, 75% 53%, 71% 55%, 66% 50%, 63% 47%, 58% 49%, 56% 44%, 51% 47%, 47% 42%, 47% 37%, 50% 33%, 45% 30%, 47% 26%, 52% 24%, 52% 19%, 55% 16%, 55% 10%, 52% 8%);
+    transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * -1));
+}
+
+.cookie-part-3ddd {
+    clip-path: polygon(0% 60%, 14% 61%, 16% 56%, 20% 56%, 25% 53%, 30% 53%, 34% 50%, 40% 50%, 47% 49%, 51% 47%, 55% 53%, 60% 56%, 56% 62%, 53% 67%, 57% 72%, 57% 81%, 57% 87%, 63% 92%, 60% 100%, 0% 100%);
+    transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * 1));
+}
+
+.cookie-part-4ddd {
+    clip-path: polygon(100% 100%, 100% 72%, 88% 68%, 84% 61%, 78% 60%, 77% 56%, 75% 53%, 71% 55%, 66% 50%, 63% 47%, 58% 49%, 56% 44%, 51% 47%, 55% 53%, 60% 56%, 56% 62%, 53% 67%, 57% 72%, 57% 81%, 57% 87%, 63% 92%, 60% 100%);
+    transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * 1));
+}
+
+.cookieddd span[class^="chocolate-chips-"] {
+    position: absolute;
+    color: #754e27;
+    background-color: #865729;
+    height: var(--chip-size);
+    width: var(--chip-size);
+    border-radius: 50%;
+    box-shadow: inset -0.35em 0;
+}
+
+.chocolate-chips-1addd { top: 41%; left: 5%; }
+.chocolate-chips-1bddd { top: 20%; left: 18%; }
+.chocolate-chips-1cddd { top: 35%; left: 33%; }
+.chocolate-chips-1dddd { top: 6%; left: 39%; }
+
+.chocolate-chips-2addd { --chip-size: calc(var(--cookie-size) / 10); top: 24%; right: 35%; }
+.chocolate-chips-2bddd { top: 36%; right: 23%; }
+.chocolate-chips-2cddd { top: 7%; right: 29%; }
+.chocolate-chips-2dddd { top: 42%; right: 7%; }
+.chocolate-chips-2eddd { top: 19%; right: 12%; }
+
+.chocolate-chips-3addd { --chip-size: calc(var(--cookie-size) / 6); bottom: 24%; left: 18%; }
+.chocolate-chips-3bddd { bottom: 34%; left: 42%; }
+.chocolate-chips-3cddd { bottom: 9%; left: 39%; }
+
+.chocolate-chips-4addd { bottom: 27%; right: 29%; }
+.chocolate-chips-4bddd { bottom: 12%; right: 23%; }
+.chocolate-chips-4cddd { --chip-size: calc(var(--cookie-size) / 12); bottom: 28%; right: 17%; }
+
+.cookieddd span[class^="chocolate-chips-1"] { transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * -1)); }
+.cookieddd span[class^="chocolate-chips-2"] { transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * -1)); }
+.cookieddd span[class^="chocolate-chips-3"] { transform: translate(calc(var(--split-offset) * -1), calc(var(--split-offset) * 1)); }
+.cookieddd span[class^="chocolate-chips-4"] { transform: translate(calc(var(--split-offset) * 1), calc(var(--split-offset) * 1)); }
+/* From Uiverse.io by Danishrehman786 */
+.togglee-containere {
+    position: relative;
+    width: 160px;
+    height: 80px;
+}
+
+.togglee-inpute {
+    display: none;
+}
+
+.togglee-labele {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 60px;
+    background: #ff4c4c;
+    border-radius: 30px;
+    box-shadow: 0 5px #b93737;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.facee {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.eyee {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.smilee {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 40px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.togglee-switche {
+    position: relative;
+    width: 35px;
+    height: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+    z-index: 1;
+}
+
+.togglee-switche:before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff4c4c;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+
+.togglee-inpute:checked + .togglee-labele .togglee-switche:before {
+    background: #28a745;
+    left: 16px;
+}
+
+.togglee-inpute:checked + .togglee-labele .smilee {
+    border-bottom-color: #fff;
+    border-top: none;
+    bottom: 10px;
+}
+
+.togglee-inpute:not(:checked) + .togglee-labele .smilee {
+    border-top-color: #fff;
+    border-bottom: none;
+    bottom: 0;
+}
+
+.togglee-inpute:checked + .togglee-labele {
+    background: #ced10a;
+    box-shadow: 0 5px #74c027;
+}
+
+.togglee-inpute:not(:checked) + .togglee-labele {
+    background: #252422;
+    box-shadow: 0 5px #484d48;
+    bottom: 5px;
+}
+
+.togglee-labele:hover .eyee {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes blink {
+    0%,
+    90%,
+    100% {
+        height: 10px;
+    }
+    95% {
+        height: 2px;
+    }
+}
+
+.lefte-eyee {
+    animation: blink 3s infinite;
+}
+
+.righte-eyee {
+    animation: blink 3s infinite;
+}
