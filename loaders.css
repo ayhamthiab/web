@@ -1,0 +1,2612 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* From Uiverse.io by Nawsome */
+.pl {
+    width: 6em;
+    height: 6em;
+}
+
+.pl__ring {
+    animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+    stroke: #f42f25;
+}
+
+.pl__ring--b {
+    animation-name: ringB;
+    stroke: #f49725;
+}
+
+.pl__ring--c {
+    animation-name: ringC;
+    stroke: #255ff4;
+}
+
+.pl__ring--d {
+    animation-name: ringD;
+    stroke: #f42582;
+}
+
+/* Animations */
+@keyframes ringA {
+    from, 4% {
+        stroke-dasharray: 0 660;
+        stroke-width: 20;
+        stroke-dashoffset: -330;
+    }
+
+    12% {
+        stroke-dasharray: 60 600;
+        stroke-width: 30;
+        stroke-dashoffset: -335;
+    }
+
+    32% {
+        stroke-dasharray: 60 600;
+        stroke-width: 30;
+        stroke-dashoffset: -595;
+    }
+
+    40%, 54% {
+        stroke-dasharray: 0 660;
+        stroke-width: 20;
+        stroke-dashoffset: -660;
+    }
+
+    62% {
+        stroke-dasharray: 60 600;
+        stroke-width: 30;
+        stroke-dashoffset: -665;
+    }
+
+    82% {
+        stroke-dasharray: 60 600;
+        stroke-width: 30;
+        stroke-dashoffset: -925;
+    }
+
+    90%, to {
+        stroke-dasharray: 0 660;
+        stroke-width: 20;
+        stroke-dashoffset: -990;
+    }
+}
+
+@keyframes ringB {
+    from, 12% {
+        stroke-dasharray: 0 220;
+        stroke-width: 20;
+        stroke-dashoffset: -110;
+    }
+
+    20% {
+        stroke-dasharray: 20 200;
+        stroke-width: 30;
+        stroke-dashoffset: -115;
+    }
+
+    40% {
+        stroke-dasharray: 20 200;
+        stroke-width: 30;
+        stroke-dashoffset: -195;
+    }
+
+    48%, 62% {
+        stroke-dasharray: 0 220;
+        stroke-width: 20;
+        stroke-dashoffset: -220;
+    }
+
+    70% {
+        stroke-dasharray: 20 200;
+        stroke-width: 30;
+        stroke-dashoffset: -225;
+    }
+
+    90% {
+        stroke-dasharray: 20 200;
+        stroke-width: 30;
+        stroke-dashoffset: -305;
+    }
+
+    98%, to {
+        stroke-dasharray: 0 220;
+        stroke-width: 20;
+        stroke-dashoffset: -330;
+    }
+}
+
+@keyframes ringC {
+    from {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: 0;
+    }
+
+    8% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -5;
+    }
+
+    28% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -175;
+    }
+
+    36%, 58% {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: -220;
+    }
+
+    66% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -225;
+    }
+
+    86% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -395;
+    }
+
+    94%, to {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: -440;
+    }
+}
+
+@keyframes ringD {
+    from, 8% {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: 0;
+    }
+
+    16% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -5;
+    }
+
+    36% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -175;
+    }
+
+    44%, 50% {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: -220;
+    }
+
+    58% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -225;
+    }
+
+    78% {
+        stroke-dasharray: 40 400;
+        stroke-width: 30;
+        stroke-dashoffset: -395;
+    }
+
+    86%, to {
+        stroke-dasharray: 0 440;
+        stroke-width: 20;
+        stroke-dashoffset: -440;
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.🤚 {
+    --skin-color: #E4C560;
+    --tap-speed: 0.6s;
+    --tap-stagger: 0.1s;
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-left: 80px;
+}
+
+.🤚:before {
+    content: '';
+    display: block;
+    width: 180%;
+    height: 75%;
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    background-color: black;
+    border-radius: 40px 10px;
+    filter: blur(10px);
+    opacity: 0.3;
+}
+
+.🌴 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--skin-color);
+    border-radius: 10px 40px;
+}
+
+.👍 {
+    position: absolute;
+    width: 120%;
+    height: 38px;
+    background-color: var(--skin-color);
+    bottom: -18%;
+    right: 1%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-20deg);
+    border-radius: 30px 20px 20px 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.👍:after {
+    width: 20%;
+    height: 60%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: -8%;
+    left: 5px;
+    border-radius: 60% 10% 10% 30%;
+    border-right: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.👉 {
+    position: absolute;
+    width: 80%;
+    height: 35px;
+    background-color: var(--skin-color);
+    bottom: 32%;
+    right: 64%;
+    transform-origin: 100% 20px;
+    animation-duration: calc(var(--tap-speed) * 2);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: rotate(10deg);
+}
+
+.👉:before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 30px;
+    background-color: var(--skin-color);
+    bottom: 8%;
+    right: 65%;
+    transform-origin: calc(100% - 20px) 20px;
+    transform: rotate(-60deg);
+    border-radius: 20px;
+}
+
+.👉:nth-child(1) {
+    animation-delay: 0;
+    filter: brightness(70%);
+    animation-name: tap-upper-1;
+}
+
+.👉:nth-child(2) {
+    animation-delay: var(--tap-stagger);
+    filter: brightness(80%);
+    animation-name: tap-upper-2;
+}
+
+.👉:nth-child(3) {
+    animation-delay: calc(var(--tap-stagger) * 2);
+    filter: brightness(90%);
+    animation-name: tap-upper-3;
+}
+
+.👉:nth-child(4) {
+    animation-delay: calc(var(--tap-stagger) * 3);
+    filter: brightness(100%);
+    animation-name: tap-upper-4;
+}
+
+@keyframes tap-upper-1 {
+    0%, 50%, 100% {
+        transform: rotate(10deg) scale(0.4);
+    }
+
+    40% {
+        transform: rotate(50deg) scale(0.4);
+    }
+}
+
+@keyframes tap-upper-2 {
+    0%, 50%, 100% {
+        transform: rotate(10deg) scale(0.6);
+    }
+
+    40% {
+        transform: rotate(50deg) scale(0.6);
+    }
+}
+
+@keyframes tap-upper-3 {
+    0%, 50%, 100% {
+        transform: rotate(10deg) scale(0.8);
+    }
+
+    40% {
+        transform: rotate(50deg) scale(0.8);
+    }
+}
+
+@keyframes tap-upper-4 {
+    0%, 50%, 100% {
+        transform: rotate(10deg) scale(1);
+    }
+
+    40% {
+        transform: rotate(50deg) scale(1);
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by terenceodonoghue */
+.third_load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+    animation: rotate_3922 1.2s linear infinite;
+    background-color: #9b59b6;
+    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.third_load span {
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #9b59b6;
+    background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.third_load span:nth-of-type(1) {
+    filter: blur(5px);
+}
+
+.third_load span:nth-of-type(2) {
+    filter: blur(10px);
+}
+
+.third_load span:nth-of-type(3) {
+    filter: blur(25px);
+}
+
+.third_load span:nth-of-type(4) {
+    filter: blur(50px);
+}
+
+.third_load::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #fff;
+    border: solid 5px #ffffff;
+    border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+/* From Uiverse.io by Hashir-Ahmed123 */
+@keyframes drop {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.lava-lamp {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background: #000;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #e64980, #ff8787);
+    border-radius: 50%;
+    left: 15px;
+    animation: drop 5s ease-in-out infinite;
+}
+.bubble1 {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #82c91e, #3bc9db);
+    border-radius: 50%;
+    left: 1px;
+    animation: drop 3s ease-in-out infinite;
+}
+.bubble2 {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #7950f2, #f783ac);
+    border-radius: 50%;
+    left: 30px;
+    animation: drop 4s ease-in-out infinite;
+}
+.bubble3 {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #4481eb, #04befe);
+    border-radius: 50%;
+    left: 20px;
+    animation: drop 6s ease-in-out infinite;
+}
+
+
+
+
+
+/* From Uiverse.io by Nawsome */
+.pl_5 {
+    display: block;
+    width: 9.375em;
+    height: 9.375em;
+}
+
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.pl__arrows {
+    animation-name: arrows42;
+    transform: rotate(45deg);
+    transform-origin: 16px 52px;
+}
+
+.pl__ring-rotate,
+.pl__ring-stroke {
+    transform-origin: 80px 80px;
+}
+
+.pl__ring-rotate {
+    animation-name: ringRotate42;
+}
+
+.pl__ring-stroke {
+    animation-name: ringStroke42;
+    transform: rotate(-45deg);
+}
+
+.pl__tick {
+    animation-name: tick42;
+}
+
+.pl__tick:nth-child(2) {
+    animation-delay: -1.75s;
+}
+
+.pl__tick:nth-child(3) {
+    animation-delay: -1.5s;
+}
+
+.pl__tick:nth-child(4) {
+    animation-delay: -1.25s;
+}
+
+.pl__tick:nth-child(5) {
+    animation-delay: -1s;
+}
+
+.pl__tick:nth-child(6) {
+    animation-delay: -0.75s;
+}
+
+.pl__tick:nth-child(7) {
+    animation-delay: -0.5s;
+}
+
+.pl__tick:nth-child(8) {
+    animation-delay: -0.25s;
+}
+
+/* Animations */
+@keyframes arrows42 {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes ringRotate42 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes ringStroke42 {
+    from,
+    to {
+        stroke-dashoffset: 452;
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        stroke-dashoffset: 169.5;
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes tick42 {
+    from,
+    3%,
+    47%,
+    to {
+        stroke-dashoffset: -12;
+    }
+
+    14%,
+    36% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by Smit-Prajapati */
+.loader6 {
+    --size: 160px;
+    --duration: 2s;
+    --logo-color: grey;
+    --background: linear-gradient(
+            0deg,
+            rgba(50, 50, 50, 0.2) 0%,
+            rgba(100, 100, 100, 0.2) 100%
+    );
+    height: var(--size);
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loader6 .box {
+    position: absolute;
+    background: rgba(100, 100, 100, 0.15);
+    background: var(--background);
+    border-radius: 50%;
+    border-top: 1px solid rgba(100, 100, 100, 1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    backdrop-filter: blur(5px);
+    animation: ripple var(--duration) infinite ease-in-out;
+}
+
+.loader6 .box:nth-child(1) {
+    inset: 40%;
+    z-index: 99;
+}
+
+.loader6 .box:nth-child(2) {
+    inset: 30%;
+    z-index: 98;
+    border-color: rgba(100, 100, 100, 0.8);
+    animation-delay: 0.2s;
+}
+
+.loader6 .box:nth-child(3) {
+    inset: 20%;
+    z-index: 97;
+    border-color: rgba(100, 100, 100, 0.6);
+    animation-delay: 0.4s;
+}
+
+.loader6 .box:nth-child(4) {
+    inset: 10%;
+    z-index: 96;
+    border-color: rgba(100, 100, 100, 0.4);
+    animation-delay: 0.6s;
+}
+
+.loader6 .box:nth-child(5) {
+    inset: 0%;
+    z-index: 95;
+    border-color: rgba(100, 100, 100, 0.2);
+    animation-delay: 0.8s;
+}
+
+.loader6 .logo {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    padding: 30%;
+}
+
+.loader6 .logo svg {
+    fill: var(--logo-color);
+    width: 100%;
+    animation: color-change var(--duration) infinite ease-in-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    }
+    50% {
+        transform: scale(1.3);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 20px -0px;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 10px -0px;
+    }
+}
+
+@keyframes color-change {
+    0% {
+        fill: var(--logo-color);
+    }
+    50% {
+        fill: white;
+    }
+    100% {
+        fill: var(--logo-color);
+    }
+}
+
+
+
+/* From Uiverse.io by Z4drus */
+.loader7 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* smooth background */
+    background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.05) 30%,
+            transparent 70%
+    );
+    overflow: hidden;
+}
+
+/* outside circle */
+.loader7::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.6);
+    animation: loader-spin 2s linear infinite;
+}
+
+/* rotating circle */
+.loader7::after {
+    content: "";
+    position: absolute;
+    inset: 10%;
+    border-radius: 50%;
+    background: conic-gradient(from 90deg, rgba(0, 0, 0, 0.2), transparent);
+    filter: blur(2px);
+    animation: loader-spin-reverse 1.5s linear infinite;
+}
+
+/* center circle */
+.loader__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    animation: loader-pulse 1s ease-in-out infinite;
+}
+
+/* Container */
+.loader__orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: orbit-rotate 3s linear infinite;
+}
+
+/* dots */
+.loader__dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+}
+
+/* 4 dots */
+.loader__dot:nth-child(1) {
+    transform: rotate(0deg) translate(60px);
+}
+.loader__dot:nth-child(2) {
+    transform: rotate(90deg) translate(60px);
+}
+.loader__dot:nth-child(3) {
+    transform: rotate(180deg) translate(60px);
+}
+.loader__dot:nth-child(4) {
+    transform: rotate(270deg) translate(60px);
+}
+
+/* Animations */
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-spin-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes loader-pulse {
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+@keyframes orbit-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by mobinkakei */
+.loader8 {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.loader8:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader8 svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loader8 svg rect,
+.loader8 svg polygon,
+.loader8 svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.loader8 svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader8 svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader8 svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader8.triangle {
+    width: 48px;
+}
+
+.loader8.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+@keyframes pathTriangle {
+    33% {
+        stroke-dashoffset: 74;
+    }
+
+    66% {
+        stroke-dashoffset: 147;
+    }
+
+    100% {
+        stroke-dashoffset: 221;
+    }
+}
+
+@keyframes dotTriangle {
+    33% {
+        transform: translate(0, 0);
+    }
+
+    66% {
+        transform: translate(10px, -18px);
+    }
+
+    100% {
+        transform: translate(-10px, -18px);
+    }
+}
+
+@keyframes pathRect {
+    25% {
+        stroke-dashoffset: 64;
+    }
+
+    50% {
+        stroke-dashoffset: 128;
+    }
+
+    75% {
+        stroke-dashoffset: 192;
+    }
+
+    100% {
+        stroke-dashoffset: 256;
+    }
+}
+
+@keyframes dotRect {
+    25% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(18px, -18px);
+    }
+
+    75% {
+        transform: translate(0, -36px);
+    }
+
+    100% {
+        transform: translate(-18px, -18px);
+    }
+}
+
+@keyframes pathCircle {
+    25% {
+        stroke-dashoffset: 125;
+    }
+
+    50% {
+        stroke-dashoffset: 175;
+    }
+
+    75% {
+        stroke-dashoffset: 225;
+    }
+
+    100% {
+        stroke-dashoffset: 275;
+    }
+}
+
+.loader8 {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+
+
+
+
+/* From Uiverse.io by SelfMadeSystem */
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader9 {
+    display: flex;
+    margin: 0.25em 0;
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+    spin 8s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by Nawsome */
+.pl10 {
+    box-shadow: 2em 0 2em rgba(0, 0, 0, 0.2) inset, -2em 0 2em rgba(255, 255, 255, 0.1) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: rotateX(30deg) rotateZ(45deg);
+    width: 14em;
+    height: 14em;
+    color: black;
+}
+
+.pl10, .pl__dot {
+    border-radius: 50%;
+}
+
+.pl__dot {
+    animation-name: shadow724;
+    box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.5);
+    top: calc(50% - 0.75em);
+    left: calc(50% - 0.75em);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.pl__dot, .pl__dot:before, .pl__dot:after {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+.pl__dot:before, .pl__dot:after {
+    content: "";
+    display: block;
+    left: 0;
+    width: inherit;
+    /*transition: background-color var(--trans-dur);*/
+}
+
+.pl__dot:before {
+    animation-name: pushInOut1724;
+    background-color: var(--bg);
+    border-radius: inherit;
+    box-shadow: 0.05em 0 0.1em rgba(0, 0, 0) inset;
+    height: inherit;
+    z-index: 1;
+}
+
+.pl__dot:after {
+    animation-name: pushInOut2724;
+    /*background-color: var(--primary1);*/
+    border-radius: 0.75em;
+    box-shadow: 0.1em 0.3em 0.2em rgba(255, 255, 255) inset, 0 -0.4em 0.2em #2e3138 inset, 0 -1em 0.25em rgba(0, 0, 0, 0.3) inset;
+    bottom: 0;
+    clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+    height: 3em;
+    transform: rotate(-45deg);
+    transform-origin: 50% 2.25em;
+}
+
+.pl__dot:nth-child(1) {
+    transform: rotate(0deg) translateX(5em) rotate(0deg);
+    z-index: 5;
+}
+
+.pl__dot:nth-child(1), .pl__dot:nth-child(1):before, .pl__dot:nth-child(1):after {
+    animation-delay: 0s;
+}
+
+.pl__dot:nth-child(2) {
+    transform: rotate(-30deg) translateX(5em) rotate(30deg);
+    z-index: 4;
+}
+
+.pl__dot:nth-child(2), .pl__dot:nth-child(2):before, .pl__dot:nth-child(2):after {
+    animation-delay: -0.1666666667s;
+}
+
+.pl__dot:nth-child(3) {
+    transform: rotate(-60deg) translateX(5em) rotate(60deg);
+    z-index: 3;
+}
+
+.pl__dot:nth-child(3), .pl__dot:nth-child(3):before, .pl__dot:nth-child(3):after {
+    animation-delay: -0.3333333333s;
+}
+
+.pl__dot:nth-child(4) {
+    transform: rotate(-90deg) translateX(5em) rotate(90deg);
+    z-index: 2;
+}
+
+.pl__dot:nth-child(4), .pl__dot:nth-child(4):before, .pl__dot:nth-child(4):after {
+    animation-delay: -0.5s;
+}
+
+.pl__dot:nth-child(5) {
+    transform: rotate(-120deg) translateX(5em) rotate(120deg);
+    z-index: 1;
+}
+
+.pl__dot:nth-child(5), .pl__dot:nth-child(5):before, .pl__dot:nth-child(5):after {
+    animation-delay: -0.6666666667s;
+}
+
+.pl__dot:nth-child(6) {
+    transform: rotate(-150deg) translateX(5em) rotate(150deg);
+    z-index: 1;
+}
+
+.pl__dot:nth-child(6), .pl__dot:nth-child(6):before, .pl__dot:nth-child(6):after {
+    animation-delay: -0.8333333333s;
+}
+
+.pl__dot:nth-child(7) {
+    transform: rotate(-180deg) translateX(5em) rotate(180deg);
+    z-index: 2;
+}
+
+.pl__dot:nth-child(7), .pl__dot:nth-child(7):before, .pl__dot:nth-child(7):after {
+    animation-delay: -1s;
+}
+
+.pl__dot:nth-child(8) {
+    transform: rotate(-210deg) translateX(5em) rotate(210deg);
+    z-index: 3;
+}
+
+.pl__dot:nth-child(8), .pl__dot:nth-child(8):before, .pl__dot:nth-child(8):after {
+    animation-delay: -1.1666666667s;
+}
+
+.pl__dot:nth-child(9) {
+    transform: rotate(-240deg) translateX(5em) rotate(240deg);
+    z-index: 4;
+}
+
+.pl__dot:nth-child(9), .pl__dot:nth-child(9):before, .pl__dot:nth-child(9):after {
+    animation-delay: -1.3333333333s;
+}
+
+.pl__dot:nth-child(10) {
+    transform: rotate(-270deg) translateX(5em) rotate(270deg);
+    z-index: 5;
+}
+
+.pl__dot:nth-child(10), .pl__dot:nth-child(10):before, .pl__dot:nth-child(10):after {
+    animation-delay: -1.5s;
+}
+
+.pl__dot:nth-child(11) {
+    transform: rotate(-300deg) translateX(5em) rotate(300deg);
+    z-index: 6;
+}
+
+.pl__dot:nth-child(11), .pl__dot:nth-child(11):before, .pl__dot:nth-child(11):after {
+    animation-delay: -1.6666666667s;
+}
+
+.pl__dot:nth-child(12) {
+    transform: rotate(-330deg) translateX(5em) rotate(330deg);
+    z-index: 6;
+}
+
+.pl__dot:nth-child(12), .pl__dot:nth-child(12):before, .pl__dot:nth-child(12):after {
+    animation-delay: -1.8333333333s;
+}
+
+.pl__text {
+    font-size: 0.75em;
+    max-width: 5rem;
+    position: relative;
+    /*text-shadow: 0 0 0.1em var(--fg-t);*/
+    transform: rotateZ(-45deg);
+}
+
+/* Animations */
+@keyframes shadow724 {
+    from {
+        animation-timing-function: ease-in;
+        box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.3);
+    }
+
+    25% {
+        animation-timing-function: ease-out;
+        box-shadow: 0.1em 0.1em 0 0.1em black, 0.8em 0 0.8em rgba(0, 0, 0, 0.5);
+    }
+
+    50%, to {
+        box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes pushInOut1724 {
+    from {
+        animation-timing-function: ease-in;
+        background-color: var(--bg);
+        transform: translate(0, 0);
+    }
+
+    25% {
+        animation-timing-function: ease-out;
+        /*background-color: var(--primary2);*/
+        transform: translate(-71%, -71%);
+    }
+
+    50%, to {
+        background-color: var(--bg);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes pushInOut2724 {
+    from {
+        animation-timing-function: ease-in;
+        background-color: var(--bg);
+        clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+    }
+
+    25% {
+        animation-timing-function: ease-out;
+        /*background-color: var(--primary1);*/
+        clip-path: polygon(0 25%, 100% 25%, 100% 100%, 0 100%);
+    }
+
+    50%, to {
+        background-color: var(--bg);
+        clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by AnnaVAnTiM */
+.pencil {
+    display: block;
+    width: 10em;
+    height: 10em;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3,
+.pencil__eraser,
+.pencil__eraser-skew,
+.pencil__point,
+.pencil__rotate,
+.pencil__stroke {
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.pencil__body1,
+.pencil__body2,
+.pencil__body3 {
+    transform: rotate(-90deg);
+}
+
+.pencil__body1 {
+    animation-name: pencilBody1;
+}
+
+.pencil__body2 {
+    animation-name: pencilBody2;
+}
+
+.pencil__body3 {
+    animation-name: pencilBody3;
+}
+
+.pencil__eraser {
+    animation-name: pencilEraser;
+    transform: rotate(-90deg) translate(49px, 0);
+}
+
+.pencil__eraser-skew {
+    animation-name: pencilEraserSkew;
+    animation-timing-function: ease-in-out;
+}
+
+.pencil__point {
+    animation-name: pencilPoint;
+    transform: rotate(-90deg) translate(49px, -30px);
+}
+
+.pencil__rotate {
+    animation-name: pencilRotate;
+}
+
+.pencil__stroke {
+    animation-name: pencilStroke;
+    transform: translate(100px, 100px) rotate(-113deg);
+}
+
+/* Animations */
+@keyframes pencilBody1 {
+    from,
+    to {
+        stroke-dashoffset: 351.86;
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        stroke-dashoffset: 150.8;
+        /* 3/8 of diameter */
+        transform: rotate(-225deg);
+    }
+}
+
+@keyframes pencilBody2 {
+    from,
+    to {
+        stroke-dashoffset: 406.84;
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        stroke-dashoffset: 174.36;
+        transform: rotate(-225deg);
+    }
+}
+
+@keyframes pencilBody3 {
+    from,
+    to {
+        stroke-dashoffset: 296.88;
+        transform: rotate(-90deg);
+    }
+
+    50% {
+        stroke-dashoffset: 127.23;
+        transform: rotate(-225deg);
+    }
+}
+
+@keyframes pencilEraser {
+    from,
+    to {
+        transform: rotate(-45deg) translate(49px, 0);
+    }
+
+    50% {
+        transform: rotate(0deg) translate(49px, 0);
+    }
+}
+
+@keyframes pencilEraserSkew {
+    from,
+    32.5%,
+    67.5%,
+    to {
+        transform: skewX(0);
+    }
+
+    35%,
+    65% {
+        transform: skewX(-4deg);
+    }
+
+    37.5%,
+    62.5% {
+        transform: skewX(8deg);
+    }
+
+    40%,
+    45%,
+    50%,
+    55%,
+    60% {
+        transform: skewX(-15deg);
+    }
+
+    42.5%,
+    47.5%,
+    52.5%,
+    57.5% {
+        transform: skewX(15deg);
+    }
+}
+
+@keyframes pencilPoint {
+    from,
+    to {
+        transform: rotate(-90deg) translate(49px, -30px);
+    }
+
+    50% {
+        transform: rotate(-225deg) translate(49px, -30px);
+    }
+}
+
+@keyframes pencilRotate {
+    from {
+        transform: translate(100px, 100px) rotate(0);
+    }
+
+    to {
+        transform: translate(100px, 100px) rotate(720deg);
+    }
+}
+
+@keyframes pencilStroke {
+    from {
+        stroke-dashoffset: 439.82;
+        transform: translate(100px, 100px) rotate(-113deg);
+    }
+
+    50% {
+        stroke-dashoffset: 164.93;
+        transform: translate(100px, 100px) rotate(-113deg);
+    }
+
+    75%,
+    to {
+        stroke-dashoffset: 439.82;
+        transform: translate(100px, 100px) rotate(112deg);
+    }
+}
+
+
+
+
+
+
+/* From Uiverse.io by Z4drus */
+
+.container12 {
+    --uib-size: 100px;
+    --uib-color: rgb(51, 172, 241);
+    --uib-speed: 1.4s;
+    --uib-bg-opacity: 0.1;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    transform-origin: center;
+    overflow: visible;
+
+}
+
+.car {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 15, 85;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: travel var(--uib-speed) linear infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.5s ease;
+}
+
+.track {
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+    transition: stroke 0.5s ease;
+}
+
+@keyframes travel {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -100;
+    }
+}
+
+
+
+
+
+
+/* From Uiverse.io by Nawsome */
+.semicircle,
+.semicircle div {
+    /*  Adjust the size of the entire animation here.
+        (Remove max size below to go above 300px.) */
+    width: 170px;
+    height: 170px;
+    /* Adjust the speed or timing function of the animation here. */
+    animation: 6s rotate141 infinite linear;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.semicircle div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.semicircle:before,
+.semicircle div:before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    display: block;
+    background: radial-gradient(transparent, transparent 65%, #000 65%, #000);
+    background-size: 100% 200%;
+}
+
+@keyframes rotate141 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by fanishah */
+.gegga {
+    width: 0;
+}
+
+.snurra {
+    filter: url(#gegga);
+}
+
+.stopp1 {
+    stop-color: #f700a8;
+}
+
+.stopp2 {
+    stop-color: #ff8000;
+}
+
+.halvan {
+    animation: Snurra1 10s infinite linear;
+    stroke-dasharray: 180 800;
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 23;
+    stroke-linecap: round;
+}
+
+.strecken {
+    animation: Snurra1 3s infinite linear;
+    stroke-dasharray: 26 54;
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 23;
+    stroke-linecap: round;
+}
+
+.skugga {
+    filter: blur(5px);
+    opacity: 0.3;
+    position: absolute;
+    transform: translate(3px, 3px);
+}
+
+@keyframes Snurra1 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -403px;
+    }
+}
+
+
+
+
+
+
+/* From Uiverse.io by iamrippon */
+.loader15 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #03dac6, #6200ea);
+    border: 8px solid transparent;
+    border-top-color: #03dac6;
+    border-bottom-color: #6200ea;
+    animation: spin 2s linear infinite;
+}
+
+.loader15::before {
+    content: "1";
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    animation: count 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes count {
+    0% {
+        content: "1";
+    }
+    1% {
+        content: "2";
+    }
+    2% {
+        content: "3";
+    }
+    3% {
+        content: "4";
+    }
+    4% {
+        content: "5";
+    }
+    5% {
+        content: "6";
+    }
+    6% {
+        content: "7";
+    }
+    7% {
+        content: "8";
+    }
+    8% {
+        content: "9";
+    }
+    9% {
+        content: "10";
+    }
+    10% {
+        content: "11";
+    }
+    11% {
+        content: "12";
+    }
+    12% {
+        content: "13";
+    }
+    13% {
+        content: "14";
+    }
+    14% {
+        content: "15";
+    }
+    15% {
+        content: "16";
+    }
+    16% {
+        content: "17";
+    }
+    17% {
+        content: "18";
+    }
+    18% {
+        content: "19";
+    }
+    19% {
+        content: "20";
+    }
+    20% {
+        content: "21";
+    }
+    21% {
+        content: "22";
+    }
+    22% {
+        content: "23";
+    }
+    23% {
+        content: "24";
+    }
+    24% {
+        content: "25";
+    }
+    25% {
+        content: "26";
+    }
+    26% {
+        content: "27";
+    }
+    27% {
+        content: "28";
+    }
+    28% {
+        content: "29";
+    }
+    29% {
+        content: "30";
+    }
+    30% {
+        content: "31";
+    }
+    31% {
+        content: "32";
+    }
+    32% {
+        content: "33";
+    }
+    33% {
+        content: "34";
+    }
+    34% {
+        content: "35";
+    }
+    35% {
+        content: "36";
+    }
+    36% {
+        content: "37";
+    }
+    37% {
+        content: "38";
+    }
+    38% {
+        content: "39";
+    }
+    39% {
+        content: "40";
+    }
+    40% {
+        content: "41";
+    }
+    41% {
+        content: "42";
+    }
+    42% {
+        content: "43";
+    }
+    43% {
+        content: "44";
+    }
+    44% {
+        content: "45";
+    }
+    45% {
+        content: "46";
+    }
+    46% {
+        content: "47";
+    }
+    47% {
+        content: "48";
+    }
+    48% {
+        content: "49";
+    }
+    49% {
+        content: "50";
+    }
+    50% {
+        content: "51";
+    }
+    51% {
+        content: "52";
+    }
+    52% {
+        content: "53";
+    }
+    53% {
+        content: "54";
+    }
+    54% {
+        content: "55";
+    }
+    55% {
+        content: "56";
+    }
+    56% {
+        content: "57";
+    }
+    57% {
+        content: "58";
+    }
+    58% {
+        content: "59";
+    }
+    59% {
+        content: "60";
+    }
+    60% {
+        content: "61";
+    }
+    61% {
+        content: "62";
+    }
+    62% {
+        content: "63";
+    }
+    63% {
+        content: "64";
+    }
+    64% {
+        content: "65";
+    }
+    65% {
+        content: "66";
+    }
+    66% {
+        content: "67";
+    }
+    67% {
+        content: "68";
+    }
+    68% {
+        content: "69";
+    }
+    69% {
+        content: "70";
+    }
+    70% {
+        content: "71";
+    }
+    71% {
+        content: "72";
+    }
+    72% {
+        content: "73";
+    }
+    73% {
+        content: "74";
+    }
+    74% {
+        content: "75";
+    }
+    75% {
+        content: "76";
+    }
+    76% {
+        content: "77";
+    }
+    77% {
+        content: "78";
+    }
+    78% {
+        content: "79";
+    }
+    79% {
+        content: "80";
+    }
+    80% {
+        content: "81";
+    }
+    81% {
+        content: "82";
+    }
+    82% {
+        content: "83";
+    }
+    83% {
+        content: "84";
+    }
+    84% {
+        content: "85";
+    }
+    85% {
+        content: "86";
+    }
+    86% {
+        content: "87";
+    }
+    87% {
+        content: "88";
+    }
+    88% {
+        content: "89";
+    }
+    89% {
+        content: "90";
+    }
+    90% {
+        content: "91";
+    }
+    91% {
+        content: "92";
+    }
+    92% {
+        content: "93";
+    }
+    93% {
+        content: "94";
+    }
+    94% {
+        content: "95";
+    }
+    95% {
+        content: "96";
+    }
+    96% {
+        content: "97";
+    }
+    97% {
+        content: "98";
+    }
+    98% {
+        content: "99";
+    }
+    99% {
+        content: "100";
+    }
+    100% {
+        content: "1";
+    }
+}
+
+
+
+
+
+
+/* From Uiverse.io by Vazafirst */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container16 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#h3 {
+    color: rgb(82, 79, 79);
+}
+
+.ring {
+    width: 190px;
+    height: 190px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.ring:nth-child(1) {
+    border-bottom: 8px solid rgb(240, 42, 230);
+    animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+    from {
+        transform: rotateX(50deg) rotateZ(110deg);
+    }
+
+    to {
+        transform: rotateX(50deg) rotateZ(470deg);
+    }
+}
+
+.ring:nth-child(2) {
+    border-bottom: 8px solid rgb(240, 19, 67);
+    animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+
+    to {
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+}
+
+.ring:nth-child(3) {
+    border-bottom: 8px solid rgb(3, 170, 170);
+    animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+    from {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+
+    to {
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+}
+
+.ring:nth-child(4) {
+    border-bottom: 8px solid rgb(207, 135, 1);
+    animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+    from {
+        transform: rotateX(70deg) rotateZ(270deg);
+    }
+
+    to {
+        transform: rotateX(70deg) rotateZ(630deg);
+    }
+}
+/* Improving visualization in light mode */
+
+
+
+
+
+/* From Uiverse.io by zanina-yassine */
+#container17 {
+    width: 100px;
+    height: 125px;
+    margin: auto auto;
+}
+
+.loading-title {
+    display: block;
+    text-align: center;
+    font-size: 20;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: #888;
+}
+
+.loading-circle {
+    display: block;
+    border-left: 5px solid;
+    border-top-left-radius: 100%;
+    border-top: 5px solid;
+    margin: 5px;
+    animation-name: Loader_611;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.sp1 {
+    border-left-color: #F44336;
+    border-top-color: #F44336;
+    width: 40px;
+    height: 40px;
+}
+
+.sp2 {
+    border-left-color: #FFC107;
+    border-top-color: #FFC107;
+    width: 30px;
+    height: 30px;
+}
+
+.sp3 {
+    width: 20px;
+    height: 20px;
+    border-left-color: #8bc34a;
+    border-top-color: #8bc34a;
+}
+
+@keyframes Loader_611 {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: right bottom;
+    }
+
+    25% {
+        transform: rotate(90deg);
+        transform-origin: right bottom;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        transform-origin: right bottom;
+    }
+
+    75% {
+        transform: rotate(270deg);
+        transform-origin: right bottom;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: right bottom;
+    }
+}
+
+
+
+
+/* From Uiverse.io by omriluz */
+.container18 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0005);
+}
+
+.container18 .loader18 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+
+.container18 .loader18:nth-child(2),
+.container18 .loader18:nth-child(4) {
+    animation-delay: -1s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(0deg);
+    }
+}
+
+.container18 .loader18:nth-child(1)::before,
+.container18 .loader18:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(0,255,249, 0.4));
+    background-size: 100px 180px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.container18 .loader18 i {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: 0 0 10px #00fff9,
+    0 0 30px #00fff9,
+    0 0 40px #00fff9,
+    0 0 50px #00fff9,
+    0 0 60px #00fff9,
+    0 0 70px #00fff9,
+    0 0 80px #00fff9,
+    0 0 90px #00fff9,
+    0 0 100px #00fff9;
+}
+
+.container18 .loader18 span {
+    position: absolute;
+    inset: 20px;
+    background: #e8e8e8;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+
+
+
+/* From Uiverse.io by 00Kubi */
+.solar-system {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #f59e0b, #ea580c, #dc2626);
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 60px rgba(255, 165, 0, 0.5);
+    z-index: 4;
+}
+
+.sun::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: linear-gradient(
+            to bottom right,
+            rgba(255, 236, 153, 0.2),
+            rgba(220, 38, 38, 0.2)
+    );
+    animation: spin 3s linear infinite;
+}
+
+.corona {
+    position: absolute;
+    inset: -1rem;
+    border-radius: 50%;
+    background: linear-gradient(
+            to bottom right,
+            rgba(245, 158, 11, 0.2),
+            rgba(220, 38, 38, 0.2)
+    );
+    filter: blur(8px);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Orbity */
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mercury-orbit {
+    width: 8rem;
+    height: 8rem;
+}
+
+.venus-orbit {
+    width: 11rem;
+    height: 11rem;
+}
+
+.earth-orbit {
+    width: 14rem;
+    height: 14rem;
+    z-index: 2;
+}
+
+.mars-orbit {
+    width: 18rem;
+    height: 18rem;
+}
+
+/* Planety */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.mercury {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: linear-gradient(to bottom right, #d1d5db, #9ca3af);
+    box-shadow: 0 0 15px rgba(156, 163, 175, 0.5);
+    --orbit-width: 8rem;
+    animation: orbit 4s linear infinite;
+}
+
+.venus {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to bottom right, #fef3c7, #fcd34d);
+    box-shadow: 0 0 15px rgba(252, 211, 77, 0.5);
+    --orbit-width: 11rem;
+    animation: orbit 6s linear infinite;
+}
+
+.earth {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: linear-gradient(to bottom right, #60a5fa, #34d399);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+    --orbit-width: 14rem;
+    animation: orbit 8s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #d1d5db;
+    box-shadow: inset 0 0 4px rgba(156, 163, 175, 0.5);
+    animation: orbit 2s linear infinite;
+}
+
+.mars {
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(to bottom right, #f87171, #dc2626);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+    --orbit-width: 18rem;
+    animation: orbit 10s linear infinite;
+}
+
+/* ISS */
+.iss {
+    position: absolute;
+    width: 0.6rem;
+    height: 0.3rem;
+    background: #e5e7eb;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 3;
+    --iss-orbit: 7.5rem;
+    animation: iss-orbit 5s linear infinite;
+}
+
+.iss-panels {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.2rem;
+    height: 0.15rem;
+    background: linear-gradient(to right, #60a5fa, #93c5fd);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px rgba(96, 165, 250, 0.5);
+}
+
+.iss::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: white;
+    border-radius: 2px;
+    opacity: 0;
+    animation: iss-flare 1.5s linear infinite;
+}
+
+/* Gwiazdy */
+.stars {
+    position: absolute;
+    inset: -2.5rem;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 0.25rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 50%;
+}
+
+.star-1 {
+    top: 25%;
+    left: 25%;
+    animation: ping 2s ease-in-out infinite;
+}
+.star-2 {
+    top: 75%;
+    left: 33%;
+    animation: ping 3s ease-in-out infinite 0.5s;
+}
+.star-3 {
+    top: 33%;
+    right: 25%;
+    animation: ping 2.5s ease-in-out infinite 0.7s;
+}
+.star-4 {
+    bottom: 25%;
+    right: 33%;
+    animation: ping 2.7s ease-in-out infinite 0.3s;
+}
+.star-5 {
+    top: 50%;
+    right: 50%;
+    animation: ping 2.3s ease-in-out infinite 0.8s;
+}
+
+/* Animacje */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(calc(var(--orbit-width) / 2))
+        rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(calc(var(--orbit-width) / 2))
+        rotate(-360deg);
+    }
+}
+
+@keyframes iss-orbit {
+    from {
+        transform: rotate(0deg) translateX(var(--iss-orbit)) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(var(--iss-orbit)) rotate(-360deg);
+    }
+}
+
+@keyframes iss-tilt {
+    0%,
+    100% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes iss-flare {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes ping {
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* From Uiverse.io by Cksunandh */
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0;
+    border-color: #8086e0 transparent transparent transparent;
+    margin: 0 auto;
+    animation: shk1 1s ease-in-out infinite normal;
+}
+
+.triangle2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent #6554b388 transparent;
+    margin: -50px auto 0;
+    animation: shk2 1s ease-in-out infinite alternate;
+}
+@keyframes shk1 {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+    }
+}
+
+@keyframes shk2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+    }
+}
+
+.text {
+    color: #949494;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}

@@ -68,7 +68,7 @@ html, body {
 }
 
 .main{
-
+border: 1px solid #ffffff;
 left: 100px;
     position: sticky;
     top: 280px;
