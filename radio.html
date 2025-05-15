@@ -1,96 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EduComponents</title>
-
-  <link rel="stylesheet" href="homepage.css" />
-  <link rel="stylesheet" href="buttons.css" />
-  <link rel="stylesheet" href="radio.css">
+    <meta charset="UTF-8">
+    <title>Radio Buttons</title>
+    <link rel="stylesheet" href="unifid.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="radio.css">
 </head>
+
 <header class="header">
-  <div class="logo-container">
-    <img src="../img/logo3.png" alt="EduComponents Logo" class="logo"/>
-    <h1 class="project-name">PixelSyntax </h1>
-  </div>
-  <div class="left-slider">
-    <a href="homepage.html" class="sidebar-btn">Home</a>
-    <a href="buttons.html" class="sidebar-btn">Buttons</a>
-    <a href="checkboxes.html" class="sidebar-btn">Checkboxes</a>
-    <a href="togleswitches.html" class="sidebar-btn">Toggle switches</a>
-    <a href="cards.html" class="sidebar-btn">Cards</a>
-    <a href="Loaders.html" class="sidebar-btn">Loaders</a>
-    <a href="inputs.html" class="sidebar-btn">Inputs</a>
-    <a href="radio.html" class="sidebar-btn">Radio buttons</a>
-    <a href="#" class="sidebar-btn">Forms</a>
-    <a href="#" class="sidebar-btn">Login</a>
-  </div>
+
+    <span style="font-size: 44px" class="project-name">PixelSyntax</span>
+
+    <span class="left-slider">
+                <a href="homepage.html" class="sidebar-btn" >Home</a>
+                <a href="buttons.html" class="sidebar-btn">Buttons</a>
+                <a href="checkboxes.html" class="sidebar-btn" >CheckBoxes</a>
+                <a href="togleswitches.html" class="sidebar-btn" >Toggle Switches</a>
+                <a href="cards.html" class="sidebar-btn" >Cards</a>
+                <a href="Loaders.html" class="sidebar-btn">Loaders</a>
+                <a href="inputs.html" class="sidebar-btn" >Inputs</a>
+                <a href="radio.html" class="sidebar-btn" style="padding-top: 25px;padding-bottom: 25px;border-radius: 50px;transform: scale(1.1);box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);">Radio Buttons</a>
+                <a href="forms.html" class="sidebar-btn">Forms</a>
+            </span>
 </header>
 
 
 
 <body>
 <div class="b_head">
-  <h1 class="b_headtext">Radio buttons </h1>
-  <h2 class="b_b_headtext">Open-Source Radio buttons made with HTML and CSS </h2>
+    <h1 class="b_headtext">Radio Button's </h1>
+    <h2 class="b_b_headtext">Open-Source Radio Button's made with HTML and CSS </h2>
 </div>
 
 
 <div class="body_1">
-  <div class="main">
+    <div class="main">
 
-    <div class="section" >
+        <div class="section" >
 
-      <article class="square">
-        <div class="button_me">
+            <article class="square">
+                <div class="button_me">
 
 
-          <!-- From Uiverse.io by SelfMadeSystem -->
-          <div class="clock-input">
-            <input type="radio" id="v1" name="radio" checked="" />
-            <input type="radio" id="v2" name="radio" />
-            <input type="radio" id="v3" name="radio" />
-            <input type="radio" id="v4" name="radio" />
-            <input type="radio" id="v5" name="radio" />
-            <input type="radio" id="v6" name="radio" />
-            <label for="v1" id="l1"></label>
-            <label for="v2" id="l2"></label>
-            <label for="v3" id="l3"></label>
-            <label for="v4" id="l4"></label>
-            <label for="v5" id="l5"></label>
-            <label for="v6" id="l6"></label>
-            <div class="dial"></div>
-            <div class="notches">
-              <div class="notch" style="--n:1"></div>
-              <div class="notch" style="--n:2"></div>
-              <div class="notch" style="--n:3"></div>
-              <div class="notch" style="--n:4"></div>
-              <div class="notch" style="--n:5"></div>
-              <div class="notch" style="--n:6"></div>
-            </div>
-          </div>
+                    <!-- From Uiverse.io by Saiyed-Tanvir -->
+                    <div class="container">
+                        <div class="pane">
+                            <label class="label">
+                                <span>Yes</span>
+                                <input id="left" class="input" name="radio" type="radio">
+                            </label>
+                            <label class="label">
+                                <span>No</span>
+                                <input id="middle" class="input" checked="checked" name="radio" type="radio">
+                            </label>
+                            <label class="label">
+                                <span>Idk</span>
+                                <input id="right" class="input" name="radio" type="radio">
+                            </label>
+                            <span class="selection"></span>
+                        </div>
+                    </div>
 
 
 
 
-
-        </div>
-        <div class="card">
-
-
-          <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+                <div class="card">
 
 
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me"><!-- From Uiverse.io by mahiatlinux -->
-          <div class="radio-inputs">
-            <label>
-              <input class="radio-input" type="radio" name="engine" />
-              <span class="radio-tile">
-      <span class="radio-icon">
+                    <a class="copy_1" href="#">&lt;/code</a>
+
+
+                </div>
+
+
+
+
+            </article>
+
+            <article class="square">
+                <div class="button_me">
+
+
+                    <div class="radio-input">
+                        <label class="second_label">
+                            <input value="value-1" name="value-radio" class="value-1" type="radio" />
+                            <span class="text">Play</span>
+                        </label>
+                        <label class="second_label">
+                            <input value="value-1" name="value-radio" class="value-1" type="radio" />
+                            <span class="text">Stop</span>
+                        </label>
+                        <label class="second_label">
+                            <input value="value-1" name="value-radio" class="value-1" type="radio" />
+                            <span class="text">Reset</span>
+                        </label>
+                    </div>
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+            </article>
+
+
+
+
+            <article class="square">
+
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by Admin12121 -->
+                    <div class="menu">
+                        <a href="#" class="link">
+    <span class="link-icon">
+      <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <path
+                d="M213.3815,109.61945,133.376,36.88436a8,8,0,0,0-10.76339.00036l-79.9945,72.73477A8,8,0,0,0,40,115.53855V208a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V115.53887A8,8,0,0,0,213.3815,109.61945Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></path>
+      </svg>
+    </span>
+                            <span class="link-title">Home</span>
+                        </a>
+                        <a href="#" class="link">
+    <span class="link-icon">
+      <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <polyline
+                points="76.201 132.201 152.201 40.201 216 40 215.799 103.799 123.799 179.799"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></polyline>
+        <line
+                x1="100"
+                y1="156"
+                x2="160"
+                y2="96"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></line>
+        <path
+                d="M82.14214,197.45584,52.201,227.397a8,8,0,0,1-11.31371,0L28.603,215.11268a8,8,0,0,1,0-11.31371l29.94113-29.94112a8,8,0,0,0,0-11.31371L37.65685,141.65685a8,8,0,0,1,0-11.3137l12.6863-12.6863a8,8,0,0,1,11.3137,0l76.6863,76.6863a8,8,0,0,1,0,11.3137l-12.6863,12.6863a8,8,0,0,1-11.3137,0L93.45584,197.45584A8,8,0,0,0,82.14214,197.45584Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></path>
+      </svg>
+    </span>
+                            <span class="link-title">Games</span>
+                        </a>
+                        <a href="#" class="link">
+    <span class="link-icon">
+      <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <path
+                d="M45.42853,176.99811A95.95978,95.95978,0,1,1,79.00228,210.5717l.00023-.001L45.84594,220.044a8,8,0,0,1-9.89-9.89l9.47331-33.15657Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></path>
+        <line
+                x1="96"
+                y1="112"
+                x2="160"
+                y2="112"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></line>
+        <line
+                x1="96"
+                y1="144"
+                x2="160"
+                y2="144"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></line>
+      </svg>
+    </span>
+                            <span class="link-title">Chat</span>
+                        </a>
+
+                        <a href="#" class="link">
+    <span class="link-icon">
+      <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <circle
+                cx="116"
+                cy="116"
+                r="84"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></circle>
+        <line
+                x1="175.39356"
+                y1="175.40039"
+                x2="223.99414"
+                y2="224.00098"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></line>
+      </svg>
+    </span>
+                            <span class="link-title">Search</span>
+                        </a>
+                        <a href="#" class="link">
+    <span class="link-icon">
+      <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="192"
+              height="192"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+      >
+        <rect width="256" height="256" fill="none"></rect>
+        <circle
+                cx="128"
+                cy="96"
+                r="64"
+                fill="none"
+                stroke="currentColor"
+                stroke-miterlimit="10"
+                stroke-width="16"
+        ></circle>
+        <path
+                d="M30.989,215.99064a112.03731,112.03731,0,0,1,194.02311.002"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+        ></path>
+      </svg>
+    </span>
+                            <span class="link-title">Profile</span>
+                        </a>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by chase2k25 -->
+                    <div class="forth_radio-input">
+                        <div class="switch-panel">
+                            <div class="track-groove"></div>
+                        </div>
+                        <div class="forth_selector">
+                            <div class="choice">
+                                <div class="input-container">
+                                    <input
+                                            class="choice-switch"
+                                            checked="true"
+                                            value="power"
+                                            name="mech-selector"
+                                            id="power"
+                                            type="radio"
+                                    />
+                                    <div class="lever"></div>
+                                </div>
+                                <label for="power" class="choice-plate">Power</label>
+                            </div>
+                            <div class="choice">
+                                <div class="input-container">
+                                    <input
+                                            class="choice-switch"
+                                            value="boost"
+                                            name="mech-selector"
+                                            id="boost"
+                                            type="radio"
+                                    />
+                                    <div class="lever"></div>
+                                </div>
+                                <label for="boost" class="choice-plate">Boost</label>
+                            </div>
+                            <div class="choice">
+                                <div class="input-container">
+                                    <input
+                                            class="choice-switch"
+                                            value="ignite"
+                                            name="mech-selector"
+                                            id="ignite"
+                                            type="radio"
+                                    />
+                                    <div class="lever"></div>
+                                </div>
+                                <label for="ignite" class="choice-plate">Ignite</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by mahiatlinux -->
+                    <div class="fifth_radio-inputs">
+                        <label>
+                            <input class="fifth_radio-input" type="radio" name="engine" />
+                            <span class="fifth_radio-tile">
+      <span class="fifth_radio-icon">
         <svg
                 stroke="currentColor"
                 xml:space="preserve"
@@ -116,13 +407,13 @@
           </g>
         </svg>
       </span>
-      <span class="radio-label">Bicycle</span>
+      <span class="fifth_radio-label">Bicycle</span>
     </span>
-            </label>
-            <label>
-              <input checked="" class="radio-input" type="radio" name="engine" />
-              <span class="radio-tile">
-      <span class="radio-icon">
+                        </label>
+                        <label>
+                            <input checked="" class="fifth_radio-input" type="radio" name="engine" />
+                            <span class="fifth_radio-tile">
+      <span class="fifth_radio-icon">
         <svg
                 stroke="currentColor"
                 xml:space="preserve"
@@ -150,13 +441,13 @@
           </g>
         </svg>
       </span>
-      <span class="radio-label">Motorbike</span>
+      <span class="fifth_radio-label">Motorbike</span>
     </span>
-            </label>
-            <label>
-              <input class="radio-input" type="radio" name="engine" />
-              <span class="radio-tile">
-      <span class="radio-icon">
+                        </label>
+                        <label>
+                            <input class="fifth_radio-input" type="radio" name="engine" />
+                            <span class="fifth_radio-tile">
+      <span class="fifth_radio-icon">
         <svg
                 stroke="currentColor"
                 xml:space="preserve"
@@ -190,511 +481,855 @@
           </g>
         </svg>
       </span>
-      <span class="radio-label">Car</span>
+      <span class="fifth_radio-label">Car</span>
     </span>
-            </label>
-          </div>
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
+                        </label>
+                    </div>
 
-        <div class="button_me">
 
 
-          <!-- From Uiverse.io by Pradeepsaranbishnoi -->
-          <div class="container">
-            <div class="tabs">
-              <input type="radio" id="radio-1" name="tabs" checked="">
-              <label class="tab" for="radio-1">Hello<span class="notification">2</span></label>
-              <input type="radio" id="radio-2" name="tabs">
-              <label class="tab" for="radio-2">UI</label>
-              <input type="radio" id="radio-3" name="tabs">
-              <label class="tab" for="radio-3">World</label>
-              <span class="glider"></span>
-            </div>
-          </div>
 
 
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-
-
-
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <button class="button_2"><!-- From Uiverse.io by m1her -->
-            <div class="radio-input4">
-              <label class="label4">
-                <div class="back-side4"></div>
-                <input type="radio" id="value-1z" name="value-radio" value="value-1" />
-                <span class="text4">play</span>
-                <span class="bottom-line4"></span>
-              </label>
-
-              <label class="label4">
-                <div class="back-side4"></div>
-                <input type="radio" id="value-2" name="value-radio" value="value-2" />
-                <span class="text4">stop</span>
-                <span class="bottom-line4"></span>
-              </label>
-
-              <label class="label4">
-                <div class="back-side4"></div>
-                <input type="radio" id="value-3" name="value-radio" value="value-3" />
-                <span class="text4">again</span>
-                <span class="bottom-line4"></span>
-              </label>
-            </div>
-          </button>
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <!-- From Uiverse.io by andrew-demchenk0 -->
-          <div class="container">
-            <div class="radio-wrapper">
-              <input class="input" name="btn" id="value-1" type="radio">
-              <div class="btn">
-                <span aria-hidden="">_</span>Cyber
-                <span class="btn__glitch" aria-hidden="">_Cyber🦾</span>
-                <label class="number">r1</label>
-              </div>
-            </div>
-            <div class="radio-wrapper">
-              <input class="input" name="btn" id="value-2" checked="true" type="radio">
-              <div class="btn">
-                _Radio<span aria-hidden="">_</span>
-                <span class="btn__glitch" aria-hidden="">_R_a_d_i_o_</span>
-                <label class="number">r2</label>
-              </div>
-            </div>
-            <div class="radio-wrapper">
-              <input class="input" name="btn" id="value-3" type="radio">
-              <div class="btn">
-                Buttons<span aria-hidden=""></span>
-                <span class="btn__glitch" aria-hidden="">Buttons_</span>
-                <label class="number">r3</label>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-
-          <!-- From Uiverse.io by vinodjangid07 -->
-          <!-- From Uiverse.io by vinodjangid07 -->
-          <button class="Btn-Container">
-            <span class="text">let's go!</span>
-            <span class="icon-Container">
-        <svg
-                width="16"
-                height="19"
-                viewBox="0 0 16 19"
-                fill="nones"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
-          <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
-          <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
-          <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
-          <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
-          <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
-          <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
-          <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
-          <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
-          <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
-        </svg>
-      </span>
-          </button>
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-
-          <!-- From Uiverse.io by alexmaracinaru -->
-          <button class="cta">
-            <span class="hover-underline-animation"> Shop now </span>
-            <svg
-                    id="arrow-horizontal"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="10"
-                    viewBox="0 0 46 16"
-            >
-              <path
-                      id="Path_10"
-                      data-name="Path 10"
-                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                      transform="translate(30)"
-              ></path>
-            </svg>
-          </button>
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-
-
-
-      </article>
-      <article class="square">
-
-        <div class="button_me">
-
-          <!-- From Uiverse.io by 0xnihilism -->
-          <div class="button-container">
-            <button class="brutalist_1-button_1 openai">
-              <div class="openai-logo">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        class="openai-icon"
-                >
-                  <path
-                          fill="#10A37F"
-                          d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5907 8.3829 14.6108 7.2144a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.3927-.6813zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="button-text">
-                <span>Powered By</span>
-                <span>GPT-Omni</span>
-              </div>
-            </button>
-          </div>
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <!-- From Uiverse.io by Yaya12085 -->
-          <button class="button_3">
-            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
-              <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
-              <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
-              <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
-              <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
-            </svg>
-            Continue with Google
-          </button>
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-
-
-
-
-
-
-      </article>
-      <article class="square">
-
-        <div class="button_me">
-
-          <!-- From Uiverse.io by alshahwan -->
-          <button class="button_4">
-            <p>Text me</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-            </svg>
-          </button>
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-
-
-
-
-
-      </article>
-      <article class="square">
-
-
-        <div class="button_me">
-
-          <!-- From Uiverse.io by JaydipPrajapati1910 -->
-          <button class="button_5">
-            <svg viewBox="0 0 16 16" class="bi bi-instagram" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
-            <span>Instragram</span>
-          </button>
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-
-
-
-
-        <div class="button_me">
-
-
-
-
-
-
-          <!-- From Uiverse.io by vinodjangid07 -->
-          <button class="Btn_1">
-            <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg>
-            <span class="icon2"></span>
-            <span class="tooltip">Download</span>
-          </button></div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <!-- From Uiverse.io by Nawsome -->
-          <button class="continue-application">
-            <div>
-              <div class="pencil"></div>
-              <div class="folder">
-                <div class="top">
-                  <svg viewBox="0 0 24 27">
-                    <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
-                  </svg>
                 </div>
-                <div class="paper"></div>
-              </div>
-            </div>
-            Continue Application
-          </button>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by FH638 -->
+                    <div class="sixth_input">
+                        <button class="sixth_value">
+                            <svg
+                                    data-name="Layer 2"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 16"
+                            >
+                                <path
+                                        d="m1.5 13v1a.5.5 0 0 0 .3379.4731 18.9718 18.9718 0 0 0 6.1621 1.0269 18.9629 18.9629 0 0 0 6.1621-1.0269.5.5 0 0 0 .3379-.4731v-1a6.5083 6.5083 0 0 0 -4.461-6.1676 3.5 3.5 0 1 0 -4.078 0 6.5083 6.5083 0 0 0 -4.461 6.1676zm4-9a2.5 2.5 0 1 1 2.5 2.5 2.5026 2.5026 0 0 1 -2.5-2.5zm2.5 3.5a5.5066 5.5066 0 0 1 5.5 5.5v.6392a18.08 18.08 0 0 1 -11 0v-.6392a5.5066 5.5066 0 0 1 5.5-5.5z"
+                                        fill="#7D8590"
+                                ></path>
+                            </svg>
+                            Public profile
+                        </button>
+                        <button class="sixth_value">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Line">
+                                <path
+                                        d="m17.074 30h-2.148c-1.038 0-1.914-.811-1.994-1.846l-.125-1.635c-.687-.208-1.351-.484-1.985-.824l-1.246 1.067c-.788.677-1.98.631-2.715-.104l-1.52-1.52c-.734-.734-.78-1.927-.104-2.715l1.067-1.246c-.34-.635-.616-1.299-.824-1.985l-1.634-.125c-1.035-.079-1.846-.955-1.846-1.993v-2.148c0-1.038.811-1.914 1.846-1.994l1.635-.125c.208-.687.484-1.351.824-1.985l-1.068-1.247c-.676-.788-.631-1.98.104-2.715l1.52-1.52c.734-.734 1.927-.779 2.715-.104l1.246 1.067c.635-.34 1.299-.616 1.985-.824l.125-1.634c.08-1.034.956-1.845 1.994-1.845h2.148c1.038 0 1.914.811 1.994 1.846l.125 1.635c.687.208 1.351.484 1.985.824l1.246-1.067c.787-.676 1.98-.631 2.715.104l1.52 1.52c.734.734.78 1.927.104 2.715l-1.067 1.246c.34.635.616 1.299.824 1.985l1.634.125c1.035.079 1.846.955 1.846 1.993v2.148c0 1.038-.811 1.914-1.846 1.994l-1.635.125c-.208.687-.484 1.351-.824 1.985l1.067 1.246c.677.788.631 1.98-.104 2.715l-1.52 1.52c-.734.734-1.928.78-2.715.104l-1.246-1.067c-.635.34-1.299.616-1.985.824l-.125 1.634c-.079 1.035-.955 1.846-1.993 1.846zm-5.835-6.373c.848.53 1.768.912 2.734 1.135.426.099.739.462.772.898l.18 2.341 2.149-.001.18-2.34c.033-.437.347-.8.772-.898.967-.223 1.887-.604 2.734-1.135.371-.232.849-.197 1.181.089l1.784 1.529 1.52-1.52-1.529-1.784c-.285-.332-.321-.811-.089-1.181.53-.848.912-1.768 1.135-2.734.099-.426.462-.739.898-.772l2.341-.18h-.001v-2.148l-2.34-.18c-.437-.033-.8-.347-.898-.772-.223-.967-.604-1.887-1.135-2.734-.232-.37-.196-.849.089-1.181l1.529-1.784-1.52-1.52-1.784 1.529c-.332.286-.81.321-1.181.089-.848-.53-1.768-.912-2.734-1.135-.426-.099-.739-.462-.772-.898l-.18-2.341-2.148.001-.18 2.34c-.033.437-.347.8-.772.898-.967.223-1.887.604-2.734 1.135-.37.232-.849.197-1.181-.089l-1.785-1.529-1.52 1.52 1.529 1.784c.285.332.321.811.089 1.181-.53.848-.912 1.768-1.135 2.734-.099.426-.462.739-.898.772l-2.341.18.002 2.148 2.34.18c.437.033.8.347.898.772.223.967.604 1.887 1.135 2.734.232.37.196.849-.089 1.181l-1.529 1.784 1.52 1.52 1.784-1.529c.332-.287.813-.32 1.18-.089z"
+                                        id="XMLID_1646_"
+                                        fill="#7D8590"
+                                ></path>
+                                <path
+                                        d="m16 23c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7zm0-12c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"
+                                        fill="#7D8590"
+                                        id="XMLID_1645_"
+                                ></path>
+                            </svg>
+                            Account
+                        </button>
+                        <button class="sixth_value">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                <path
+                                        d="m109.9 20.63a6.232 6.232 0 0 0 -8.588-.22l-57.463 51.843c-.012.011-.02.024-.031.035s-.023.017-.034.027l-4.721 4.722a1.749 1.749 0 0 0 0 2.475l.341.342-3.16 3.16a8 8 0 0 0 -1.424 1.967 11.382 11.382 0 0 0 -12.055 10.609c-.006.036-.011.074-.015.111a5.763 5.763 0 0 1 -4.928 5.41 1.75 1.75 0 0 0 -.844 3.14c4.844 3.619 9.4 4.915 13.338 4.915a17.14 17.14 0 0 0 11.738-4.545l.182-.167a11.354 11.354 0 0 0 3.348-8.081c0-.225-.02-.445-.032-.667a8.041 8.041 0 0 0 1.962-1.421l3.16-3.161.342.342a1.749 1.749 0 0 0 2.475 0l4.722-4.722c.011-.011.018-.025.029-.036s.023-.018.033-.029l51.844-57.46a6.236 6.236 0 0 0 -.219-8.589zm-70.1 81.311-.122.111c-.808.787-7.667 6.974-17.826 1.221a9.166 9.166 0 0 0 4.36-7.036 1.758 1.758 0 0 0 .036-.273 7.892 7.892 0 0 1 9.122-7.414c.017.005.031.014.048.019a1.717 1.717 0 0 0 .379.055 7.918 7.918 0 0 1 4 13.317zm5.239-10.131c-.093.093-.194.176-.293.26a11.459 11.459 0 0 0 -6.289-6.286c.084-.1.167-.2.261-.3l3.161-3.161 6.321 6.326zm7.214-4.057-9.479-9.479 2.247-2.247 9.479 9.479zm55.267-60.879-50.61 56.092-9.348-9.348 56.092-50.61a2.737 2.737 0 0 1 3.866 3.866z"
+                                        fill="#7D8590"
+                                ></path>
+                            </svg>
+                            Appearance
+                        </button>
+                        <button class="sixth_value">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="svg8">
+                                <g transform="translate(-33.022 -30.617)" id="layer1">
+                                    <path
+                                            d="m49.021 31.617c-2.673 0-4.861 2.188-4.861 4.861 0 1.606.798 3.081 1.873 3.834h-7.896c-1.7 0-3.098 1.401-3.098 3.1s1.399 3.098 3.098 3.098h4.377l.223 2.641s-1.764 8.565-1.764 8.566c-.438 1.642.55 3.355 2.191 3.795s3.327-.494 3.799-2.191l2.059-5.189 2.059 5.189c.44 1.643 2.157 2.631 3.799 2.191s2.63-2.153 2.191-3.795l-1.764-8.566.223-2.641h4.377c1.699 0 3.098-1.399 3.098-3.098s-1.397-3.1-3.098-3.1h-7.928c1.102-.771 1.904-2.228 1.904-3.834 0-2.672-2.189-4.861-4.862-4.861zm0 2c1.592 0 2.861 1.27 2.861 2.861 0 1.169-.705 2.214-1.789 2.652-.501.203-.75.767-.563 1.273l.463 1.254c.145.393.519.654.938.654h8.975c.626 0 1.098.473 1.098 1.1s-.471 1.098-1.098 1.098h-5.297c-.52 0-.952.398-.996.916l-.311 3.701c-.008.096-.002.191.018.285 0 0 1.813 8.802 1.816 8.82.162.604-.173 1.186-.777 1.348s-1.184-.173-1.346-.777c-.01-.037-3.063-7.76-3.063-7.76-.334-.842-1.525-.842-1.859 0 0 0-3.052 7.723-3.063 7.76-.162.604-.741.939-1.346.777s-.939-.743-.777-1.348c.004-.019 1.816-8.82 1.816-8.82.02-.094.025-.189.018-.285l-.311-3.701c-.044-.518-.477-.916-.996-.916h-5.297c-.627 0-1.098-.471-1.098-1.098s.472-1.1 1.098-1.1h8.975c.419 0 .793-.262.938-.654l.463-1.254c.188-.507-.062-1.07-.563-1.273-1.084-.438-1.789-1.483-1.789-2.652.001-1.591 1.271-2.861 2.862-2.861z"
+                                            id="path26276"
+                                            fill="#7D8590"
+                                    ></path>
+                                </g>
+                            </svg>
+                            Accessibility
+                        </button>
+                        <button class="sixth_value">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+                                <path
+                                        fill-rule="evenodd"
+                                        fill="#7D8590"
+                                        d="m11.9572 4.31201c-3.35401 0-6.00906 2.59741-6.00906 5.67742v3.29037c0 .1986-.05916.3927-.16992.5576l-1.62529 2.4193-.01077.0157c-.18701.2673-.16653.5113-.07001.6868.10031.1825.31959.3528.67282.3528h14.52603c.2546 0 .5013-.1515.6391-.3968.1315-.2343.1117-.4475-.0118-.6093-.0065-.0085-.0129-.0171-.0191-.0258l-1.7269-2.4194c-.121-.1695-.186-.3726-.186-.5809v-3.29037c0-1.54561-.6851-3.023-1.7072-4.00431-1.1617-1.01594-2.6545-1.67311-4.3019-1.67311zm-8.00906 5.67742c0-4.27483 3.64294-7.67742 8.00906-7.67742 2.2055 0 4.1606.88547 5.6378 2.18455.01.00877.0198.01774.0294.02691 1.408 1.34136 2.3419 3.34131 2.3419 5.46596v2.97007l1.5325 2.1471c.6775.8999.6054 1.9859.1552 2.7877-.4464.795-1.3171 1.4177-2.383 1.4177h-14.52603c-2.16218 0-3.55087-2.302-2.24739-4.1777l1.45056-2.1593zm4.05187 11.32257c0-.5523.44772-1 1-1h5.99999c.5523 0 1 .4477 1 1s-.4477 1-1 1h-5.99999c-.55228 0-1-.4477-1-1z"
+                                        clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                            Notifications
+                        </button>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by Smit-Prajapati -->
+                    <div class="seventh_radio-container">
+                        <input checked="" id="radio-free" name="radio" type="radio" />
+                        <label for="radio-free">Free</label>
+                        <input id="radio-basic" name="radio" type="radio" />
+                        <label for="radio-basic">Basic</label>
+                        <input id="radio-premium" name="radio" type="radio" />
+                        <label for="radio-premium">Premium</label>
+
+                        <div class="glider-container">
+                            <div class="glider"></div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+            </article>
+            <article class="square">
+
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by 3bdel3ziz-T -->
+                    <section>
+                        <label title="home" for="home" class="label">
+                            <input id="home" name="page" type="radio" checked="" />
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 21 20"
+                                    height="20"
+                                    width="21"
+                                    class="icon home"
+                            >
+                                <path
+                                        fill="inherit"
+                                        d="M18.9999 6.01002L12.4499 0.770018C11.1699 -0.249982 9.16988 -0.259982 7.89988 0.760018L1.34988 6.01002C0.409885 6.76002 -0.160115 8.26002 0.0398848 9.44002L1.29988 16.98C1.58988 18.67 3.15988 20 4.86988 20H15.4699C17.1599 20 18.7599 18.64 19.0499 16.97L20.3099 9.43002C20.4899 8.26002 19.9199 6.76002 18.9999 6.01002ZM10.9199 16C10.9199 16.41 10.5799 16.75 10.1699 16.75C9.75988 16.75 9.41988 16.41 9.41988 16V13C9.41988 12.59 9.75988 12.25 10.1699 12.25C10.5799 12.25 10.9199 12.59 10.9199 13V16Z"
+                                ></path>
+                            </svg>
+                        </label>
+                        <label title="cart" for="cart" class="label">
+                            <input id="cart" name="page" type="radio" />
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="inherit"
+                                    viewBox="0 0 18 20"
+                                    height="20"
+                                    width="18"
+                                    class="icon cart"
+                            >
+                                <path
+                                        fill="inherit"
+                                        d="M16.8035 6.96427C16.1335 6.22427 15.1235 5.79427 13.7235 5.64427V4.88427C13.7235 3.51427 13.1435 2.19427 12.1235 1.27427C11.6202 0.812823 11.025 0.462927 10.3771 0.247511C9.72909 0.032095 9.04292 -0.0439787 8.3635 0.0242742C5.9735 0.254274 3.9635 2.56427 3.9635 5.06427V5.64427C2.5635 5.79427 1.5535 6.22427 0.883496 6.96427C-0.0865043 8.04427 -0.0565042 9.48427 0.0534958 10.4843L0.753496 16.0543C0.963496 18.0043 1.7535 20.0043 6.0535 20.0043H11.6335C15.9335 20.0043 16.7235 18.0043 16.9335 16.0643L17.6335 10.4743C17.7435 9.48427 17.7635 8.04427 16.8035 6.96427ZM8.5035 1.41427C8.98813 1.36559 9.47758 1.41913 9.94023 1.57143C10.4029 1.72372 10.8284 1.97138 11.1894 2.29841C11.5503 2.62544 11.8387 3.02456 12.0357 3.46998C12.2328 3.91539 12.3343 4.39721 12.3335 4.88427V5.58427H5.3535V5.06427C5.3535 3.28427 6.8235 1.57427 8.5035 1.41427ZM5.2635 11.1543H5.2535C4.7035 11.1543 4.2535 10.7043 4.2535 10.1543C4.2535 9.60427 4.7035 9.15427 5.2535 9.15427C5.8135 9.15427 6.2635 9.60427 6.2635 10.1543C6.2635 10.7043 5.8135 11.1543 5.2635 11.1543ZM12.2635 11.1543H12.2535C11.7035 11.1543 11.2535 10.7043 11.2535 10.1543C11.2535 9.60427 11.7035 9.15427 12.2535 9.15427C12.8135 9.15427 13.2635 9.60427 13.2635 10.1543C13.2635 10.7043 12.8135 11.1543 12.2635 11.1543Z"
+                                ></path>
+                            </svg>
+                        </label>
+                        <label title="favorite" for="favorite" class="label">
+                            <input id="favorite" name="page" type="radio" />
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="inherit"
+                                    viewBox="0 0 20 18"
+                                    height="18"
+                                    width="20"
+                                    class="icon favorite"
+                            >
+                                <path
+                                        fill="inherit"
+                                        d="M14.44 0C12.63 0 11.01 0.88 10 2.23C9.48413 1.53881 8.81426 0.977391 8.04353 0.590295C7.27281 0.203198 6.42247 0.00108555 5.56 0C2.49 0 0 2.5 0 5.59C0 6.78 0.19 7.88 0.52 8.9C2.1 13.9 6.97 16.89 9.38 17.71C9.72 17.83 10.28 17.83 10.62 17.71C13.03 16.89 17.9 13.9 19.48 8.9C19.81 7.88 20 6.78 20 5.59C20 2.5 17.51 0 14.44 0Z"
+                                ></path>
+                            </svg>
+                        </label>
+                        <label title="notifications" for="notifications" class="label">
+                            <input id="notifications" name="page" type="radio" />
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="inherit"
+                                    viewBox="0 0 16 20"
+                                    height="20"
+                                    width="16"
+                                    class="icon history"
+                            >
+                                <path
+                                        fill="inherit"
+                                        d="M15.0294 12.4902L14.0294 10.8302C13.8194 10.4602 13.6294 9.76016 13.6294 9.35016V6.82016C13.6282 5.70419 13.3111 4.61137 12.7147 3.66813C12.1183 2.72489 11.267 1.96978 10.2594 1.49016C10.0022 1.0335 9.62709 0.654303 9.17324 0.392195C8.71939 0.130087 8.20347 -0.00530784 7.6794 0.000159243C6.5894 0.000159243 5.6094 0.590159 5.0894 1.52016C3.1394 2.49016 1.7894 4.50016 1.7894 6.82016V9.35016C1.7894 9.76016 1.5994 10.4602 1.3894 10.8202L0.379396 12.4902C-0.0206039 13.1602 -0.110604 13.9002 0.139396 14.5802C0.379396 15.2502 0.949396 15.7702 1.6894 16.0202C3.6294 16.6802 5.6694 17.0002 7.7094 17.0002C9.7494 17.0002 11.7894 16.6802 13.7294 16.0302C14.4294 15.8002 14.9694 15.2702 15.2294 14.5802C15.4894 13.8902 15.4194 13.1302 15.0294 12.4902ZM10.5194 18.0102C10.3091 18.5923 9.92467 19.0956 9.41835 19.4516C8.91203 19.8077 8.30837 19.9992 7.6894 20.0002C6.8994 20.0002 6.1194 19.6802 5.5694 19.1102C5.2494 18.8102 5.0094 18.4102 4.8694 18.0002C4.9994 18.0202 5.1294 18.0302 5.2694 18.0502C5.4994 18.0802 5.7394 18.1102 5.9794 18.1302C6.5494 18.1802 7.1294 18.2102 7.7094 18.2102C8.2794 18.2102 8.8494 18.1802 9.4094 18.1302C9.6194 18.1102 9.8294 18.1002 10.0294 18.0702L10.5194 18.0102Z"
+                                ></path>
+                            </svg>
+                        </label>
+                    </section>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by escannord -->
+                    <div class="ninth_radio-input">
+                        <input value="value-1" name="value-radio" id="value-1" type="radio" />
+                        <label for="value-1">
+                            <div class="ninth_text">
+                                <span class="circle"></span>
+                                Monthly
+                            </div>
+                            <div class="price">
+                                <span>$30/mo</span>
+                                <span class="small">$30 billed every month</span>
+                            </div> </label
+                        ><input value="value-2" name="value-radio" id="value-2" type="radio" />
+                        <label for="value-2">
+                            <div class="ninth_text">
+                                <span class="circle"></span>
+                                Annualy
+                            </div>
+                            <div class="price">
+                                <span>$15/mo</span>
+                                <span class="small">$180 billed once a year</span>
+                            </div>
+                            <span class="info">save up to 50%</span>
+                        </label>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+
+
+
+            </article>
+            <article class="square">
+
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by SivarajRathinam -->
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <input type="radio" id="section1" name="accordion" />
+                            <label for="section1" class="accordion-header">
+                                <label class="accordion-title">Section 1</label>
+                                <div class="accordion-icon">
+                                    <svg
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                            height="16"
+                                            width="16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                                d="M4.293 5.293a1 1 0 0 1 1.414 0L8 7.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z"
+                                                fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="content">
+                                <p>This is the content for Section 1.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <input checked="" type="radio" id="section2" name="accordion" />
+                            <label for="section2" class="accordion-header">
+                                <label class="accordion-title">Section 2</label>
+                                <div class="accordion-icon">
+                                    <svg
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                            height="16"
+                                            width="16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                                d="M4.293 5.293a1 1 0 0 1 1.414 0L8 7.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z"
+                                                fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="content">
+                                <p>This is the content for Section 2.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <input type="radio" id="section3" name="accordion" />
+                            <label for="section3" class="accordion-header">
+                                <label class="accordion-title">Section 3</label>
+                                <div class="accordion-icon">
+                                    <svg
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                            height="16"
+                                            width="16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                                d="M4.293 5.293a1 1 0 0 1 1.414 0L8 7.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z"
+                                                fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </label>
+                            <div class="content">
+                                <p>This is the content for Section 3.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+
+
+            </article>
+            <article class="square">
+
+
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by Yaya12085 -->
+                    <div class="radio-input11">
+                        <div class="info11">
+                            <span class="question">What does CSS stand for?</span>
+                            <span class="steps">3/10</span>
+                        </div>
+                        <input type="radio" id="value-11" name="value-radio" value="value-1">
+                        <label for="value-11">Computer Style Sheets</label>
+                        <input type="radio" id="value-21" name="value-radio" value="value-2">
+                        <label for="value-21">Cascading Style Sheets</label>
+                        <input type="radio" id="value-31" name="value-radio" value="value-3">
+                        <label for="value-31">Creative Style Sheets</label>
+                        <span class="result success">Congratulations!</span>
+                        <span class="result error">Bad answer</span>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+
+
+
+
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by Zain-Muhammad -->
+                    <div class="article-feedback-container">
+                        <div class="article-feedback-heading">PixelSyntax is helpful?</div>
+                        <div class="article-feedback-heading" style="font-size: 10px">Hint : The answer is always yes</div>
+                        <div class="article-feedback-wrapper">
+                            <input class="input" id="yes" value="yes" name="article" type="radio" />
+                            <label class="article-feedback" for="yes"> Yes </label>
+                            <input class="input" id="no" value="no" name="article" type="radio" />
+                            <label class="article-feedback" for="no"> No </label>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by german_7619 -->
+                    <div class="radio-inputs13">
+                        <label class="radio13">
+                            <input type="radio" name="radio" checked="" />
+                            <span class="name13">
+      <span class="pre-name"></span>
+      <span class="pos-name"></span>
+      <span> Tabs </span>
+    </span>
+                            <div class="content13">
+                                <div>
+                                    <div>Content</div>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="radio13">
+                            <input type="radio" name="radio" />
+                            <span class="name13">
+      <span class="pre-name"></span>
+      <span class="pos-name"></span>
+      <span> And </span>
+    </span>
+                            <div class="content13">
+                                <div>
+                                    <div>And content</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="radio13">
+                            <input type="radio" name="radio" />
+                            <span class="name13">
+      <span class="pre-name"></span>
+      <span class="pos-name"></span>
+      <span> More </span>
+    </span>
+                            <div class="content13">
+                                <div>
+                                    <div>More content</div>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="radio13">
+                            <input type="radio" name="radio" />
+                            <span class="name13">
+      <span class="pre-name"></span>
+      <span class="pos-name"></span>
+      <span> Tabs </span>
+    </span>
+                            <div class="content13">
+                                <div>
+                                    <div>And Even More content</div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by _7754 -->
+                    <div class="feedback">
+                        <label class="angry">
+                            <input name="feedback" value="1" type="radio" />
+                            <div>
+                                <svg class="eye left"></svg>
+                                <svg class="eye right"></svg>
+                                <svg class="mouth"></svg>
+                            </div>
+                        </label>
+                        <label class="sad">
+                            <input name="feedback" value="2" type="radio" />
+                            <div>
+                                <svg class="eye left"></svg>
+                                <svg class="eye right"></svg>
+                                <svg class="mouth"></svg>
+                            </div>
+                        </label>
+                        <label class="ok">
+                            <input name="feedback" value="3" type="radio" />
+                            <div></div>
+                        </label>
+                        <label class="good">
+                            <input checked="" name="feedback" value="4" type="radio" />
+                            <div>
+                                <svg class="eye left"></svg>
+                                <svg class="eye right"></svg>
+                                <svg class="mouth"></svg>
+                            </div>
+                        </label>
+                        <label class="happy">
+                            <input name="feedback" value="5" type="radio" />
+                            <div>
+                                <svg class="eye left"></svg>
+                                <svg class="eye right"></svg>
+                            </div>
+                        </label>
+                    </div>
+
+                    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+                        <symbol id="eye" viewBox="0 0 7 4" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"
+                            ></path>
+                        </symbol>
+                        <symbol id="mouth" viewBox="0 0 18 7" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"
+                            ></path>
+                        </symbol>
+                    </svg>
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+            </article>
+
+
+
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by chase2k25 -->
+                    <div class="fan-speed-knob">
+                        <div class="wrapper">
+                            <div class="knob-outer">
+                                <div class="knob-base">
+                                    <hr class="divider" />
+                                    <hr class="divider" />
+                                    <hr class="divider" />
+                                    <div class="control">
+                                        <label for="fan_off"><span class="off">OFF</span></label>
+                                        <label for="fan_1"><span>1</span></label>
+                                        <label for="fan_2"><span>2</span></label>
+                                        <label for="fan_3"><span>3</span></label>
+                                        <label for="fan_4"><span>4</span></label>
+                                        <label for="fan_5"><span>5</span></label>
+                                        <input id="fan_off" name="fan" checked="" type="radio" />
+                                        <input id="fan_1" name="fan" type="radio" />
+                                        <input id="fan_2" name="fan" type="radio" />
+                                        <input id="fan_3" name="fan" type="radio" />
+                                        <input id="fan_4" name="fan" type="radio" />
+                                        <input id="fan_5" name="fan" type="radio" />
+                                        <div class="pointer"><span></span></div>
+                                        <div class="marker"><span></span></div>
+                                        <div class="knob-middle">
+                                            <div class="knob-inner">
+                                                <div class="knob-core">
+                                                    <div class="status">
+                                                        <div class="off-light"></div>
+                                                        <div class="speed-lights">
+                                                            <span class="speed-light"></span>
+                                                            <span class="speed-light"></span>
+                                                            <span class="speed-light"></span>
+                                                            <span class="speed-light"></span>
+                                                            <span class="speed-light"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by m1her -->
+                    <div class="radio-input16">
+                        <div class="center"></div>
+                        <label class="label16 spring">
+                            <input type="radio" id="value-111" name="value-radio" value="value-1" />
+                            <span class="text spring">Spring</span>
+                        </label>
+                        <label class="label16 summer">
+                            <input type="radio" id="value-222" name="value-radio" value="value-2" />
+                            <span class="text summer">Summer</span>
+                        </label>
+                        <label class="label16 autumn">
+                            <input type="radio" id="value-333" name="value-radio" value="value-3" />
+                            <span class="text autumn">Autumn</span>
+                        </label>
+                        <label class="label16 winter">
+                            <input type="radio" id="value-444" name="value-radio" value="value-4" />
+                            <span class="text winter">Winter</span>
+                        </label>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+
+
+
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by it12uw -->
+                    <div class="radio17">
+                        <input
+                                label="Yes"
+                                type="radio"
+                                id="male"
+                                name="gender"
+                                value="male"
+                                checked=""
+                        />
+                        <input label="No" type="radio" id="female" name="gender" value="female" />
+                        <input
+                                label="I hate making decisions 🤷🏻‍♂️"
+                                type="radio"
+                                id="other"
+                                name="gender"
+                                value="other"
+                        />
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a class="copy_1" href="#">&lt;/code</a>
+                </div>
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by InfinityLoopGames -->
+                    <div class="container17">
+                        <div class="radio-wrapper">
+                            <input type="radio" id="value-1111" name="btn" class="input17">
+                            <div class="btn">
+                                <span aria-hidden="">_</span>Cyber
+                                <span aria-hidden="" class="btn__glitch">_Cyber🦾</span>
+                                <label class="number">r1</label>
+                            </div>
+                        </div>
+                        <div class="radio-wrapper">
+                            <input type="radio" checked="true" id="value-2222" name="btn" class="input17">
+                            <div class="btn">
+                                _Radio<span aria-hidden="">_</span>
+                                <span aria-hidden="" class="btn__glitch">_R_a_d_i_o_</span>
+                                <label class="number">r2</label>
+                            </div>
+                        </div>
+                        <div class="radio-wrapper">
+                            <input type="radio" id="value-3" name="btn" class="input17">
+                            <div class="btn">
+                                Buttons<span aria-hidden=""></span>
+                                <span aria-hidden="" class="btn__glitch">Buttons_</span>
+                                <label class="number">r3</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="card">
+                    <a href="#" class="copy_1">&lt;/code</a>
+                </div>
+
+            </article>
+            <article class="square">
+                <div class="button_me">
+
+
+
+                    <!-- From Uiverse.io by aadium -->
+                    <label id="topleft" class="container19">
+                        <input name="my-radio-button" type="radio">
+                        <label id="tl" style="font-size: 15px ; font-weight: bold " >Ayham</label>
+                        <div class="selected"></div>
+                    </label>
+                    &nbsp;
+                    <label id="topright" class="container19">
+                        <input name="my-radio-button" type="radio">
+                        <label id="tr" style="font-size: 15px ; font-weight: bold ">Baarah</label>
+                        <div class="selected"></div>
+                    </label>
+                    <br>
+                    <br>
+                    <label id="bottomleft" class="container19">
+                        <input name="my-radio-button" type="radio">
+                        <label id="bl" style="font-size: 15px ; font-weight: bold ">Ayham</label>
+                        <div class="selected"></div>
+                    </label>
+                    &nbsp;
+                    <label id="bottomright" class="container19">
+                        <input name="my-radio-button" type="radio">
+                        <label id="br" style="font-size: 15px ; font-weight: bold ">Thiab</label>
+                        <div class="selected"></div>
+                    </label>
+
+
+
+
+
+
+                </div>
+                <div class="card">
+
+                    <a href="#" class="copy_1">&lt;/code</a>
+                </div>
+            </article>
+
+
+
+            <article class="square">
+                <div class="button_me">
+
+
+                    <!-- From Uiverse.io by Yaya12085 -->
+                    <div class="radio-input20">
+                        <input checked="" value="color-1" name="color" id="color-1" type="radio">
+                        <label for="color-1">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Check"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path> </g> </g></svg>
+      </span>
+                        </label>
+
+                        <input value="color-2" name="color" id="color-2" type="radio">
+                        <label for="color-2">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Check"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path> </g> </g></svg>
+      </span>
+                        </label>
+
+                        <input value="color-3" name="color" id="color-3" type="radio">
+                        <label for="color-3">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Check"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M6 12L10.2426 16.2426L18.727 7.75732" id="Vector"></path> </g> </g></svg>
+      </span>
+                        </label>
+
+                    </div>
+
+
+
+                </div>
+                <div class="card">
+
+                    <a href="#" class="copy_1">&lt;/code</a>
+                </div>
+            </article>
+
 
 
         </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-          <!-- From Uiverse.io by vinodjangid07 -->
-          <button class="editBtn">
-            <svg height="1em" viewBox="0 0 512 512">
-              <path
-                      d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"
-              ></path>
-            </svg>
-          </button>
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-
-          <div class="del">
-            <div>
-              Hover
-            </div>
-          </div>
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-
-      </article>
-      <article class="square">
-        <div class="button_me">
-          <!-- From Uiverse.io by Novaxlo -->
-          <div class="playstation-input">
-            <div id="cross-input">
-              <div id="cross-title">CROSS</div>
-              <button id="cross"><p>x</p></button>
-            </div>
-            <div id="circle-input">
-              <div id="circle-title">CIRCLE</div>
-              <button id="circle"><div></div></button>
-            </div>
-            <div id="square-input">
-              <div id="square-title">SQUARE</div>
-              <button id="square"><div></div></button>
-            </div>
-            <div id="triangle-input">
-              <div id="triangle-title">TRIANGLE</div>
-              <button id="triangle"><p>△</p></button>
-            </div>
-          </div>
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-
-      </article>
-      <article class="square">
-        <div class="button_me">
-          <!-- From Uiverse.io by pandey_saurav_ -->
-          <div class="light-button">
-            <button class="bt">
-              <div class="light-holder">
-                <div class="dot"></div>
-                <div class="light"></div>
-              </div>
-              <div class="button-holder">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                          d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z"
-                          fill="currentColor"
-                  ></path>
-                </svg>
-                <p>Youtube</p>
-              </div>
-            </button>
-          </div>
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <!-- From Uiverse.io by BatAffl3ck -->
-          <a class="btn">
-            <div>GET STARTED</div>
-          </a>
-
-
-
-
-        </div>
-        <div class="card">
-          <a class="copy_1" href="#">&lt;/code</a>
-        </div>
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-          <button class="button_7" data-text="Awesome">
-            <span class="actual-text">&nbsp;PixelSyntax&nbsp;</span>
-            <span aria-hidden="true" class="hover-text">&nbsp;PixelSyntax&nbsp;</span>
-          </button>
-        </div>
-        <div class="card">
-          <a href="#" class="copy_1">&lt;/code</a>
-        </div>
-
-      </article>
-      <article class="square">
-        <div class="button_me">
-
-
-          <button class="button_6">
-            <span>Button</span><i></i>
-          </button>
-
-        </div>
-        <div class="card">
-
-          <a href="#" class="copy_1">&lt;/code</a>
-        </div>
-      </article>
 
     </div>
+    <script>
+        const squares = document.querySelectorAll('.square');
+        const columns = 4;
+        const rows = 5;
+        const gap = 10; // px
+        const section = document.querySelector('.section');
 
-  </div>
-  <script>
-    const squares = document.querySelectorAll('.square');
-    const columns = 4;
-    const rows = 5;
-    const gap = 10; // px
-    const section = document.querySelector('.section');
+        const sectionWidth = section.clientWidth;
+        const sectionHeight = section.clientHeight;
 
-    const sectionWidth = section.clientWidth;
-    const sectionHeight = section.clientHeight;
+        // نحسب العرض والارتفاع الفعلي لكل مربع بعد خصم الفراغات
+        const totalHorizontalGap = gap * (columns - 1);
+        const totalVerticalGap = gap * (rows - 1);
 
-    // نحسب العرض والارتفاع الفعلي لكل مربع بعد خصم الفراغات
-    const totalHorizontalGap = gap * (columns - 1);
-    const totalVerticalGap = gap * (rows - 1);
+        const squareWidth = (sectionWidth - totalHorizontalGap) / columns;
+        const squareHeight = (sectionHeight - totalVerticalGap) / rows;
 
-    const squareWidth = (sectionWidth - totalHorizontalGap) / columns;
-    const squareHeight = (sectionHeight - totalVerticalGap) / rows;
+        squares.forEach((square, index) => {
+            const col = index % columns;
+            const row = Math.floor(index / columns);
 
-    squares.forEach((square, index) => {
-      const col = index % columns;
-      const row = Math.floor(index / columns);
+            const left = col * (squareWidth + gap);
+            const top = row * (squareHeight + gap);
 
-      const left = col * (squareWidth + gap);
-      const top = row * (squareHeight + gap);
-
-      square.style.width = `${squareWidth}px`;
-      square.style.height = `${squareHeight}px`;
-      square.style.left = `${left}px`;
-      square.style.top = `${top}px`;
-    });
-  </script>
+            square.style.width = `${squareWidth}px`;
+            square.style.height = `${squareHeight}px`;
+            square.style.left = `${left}px`;
+            square.style.top = `${top}px`;
+        });
+    </script>
 </div>
 </body>
 </html>
