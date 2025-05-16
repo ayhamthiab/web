@@ -6,7 +6,7 @@
     padding: 0;
     position: relative;
     width: 100%;
-    background-color: whitesmoke;
+    background-image: linear-gradient(to right bottom, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc);
 
 }
 .body_2{
@@ -14,9 +14,9 @@
 
     position: absolute;
     width: 100%;
-    background-color: red;
+    background-image: linear-gradient(to right bottom, #20131c, #291929, #302039, #40334e, #504664, #605b7a, #85819a, #aca9bb, #d5d3dc);
     height: 610px;
-
+    overflow: auto;
 
 }
 .copy_1{
@@ -2230,4 +2230,50 @@ left: 100px;
 .button_7:hover .hover-text {
     width: 100%;
     filter: drop-shadow(0 5px 23px var(--animation-color))
+}
+
+
+
+.html_code{
+
+    width: 100%;
+    height: 500px;
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    border: 1px solid #444;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    resize: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.css_code{
+    width: 100%;
+    height: 500px;
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    border: 1px solid #444;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    resize: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+
+}
+
+.html_code:focus {
+    outline: none;
+    border-color: #ffc966;
+    box-shadow: 0 0 10px #ffc96666;
+}
+
+.css_code:focus {
+    outline: none;
+    border-color: #ffc966;
+    box-shadow: 0 0 10px #ffc96666;
 }
