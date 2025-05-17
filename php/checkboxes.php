@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+
+
+
+
+<!DOCTYPE html><?php
+session_start();
+
+if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
+
+}
+else{
+    header("location:../php/Login.php");
+    exit;
+
+}
+?>
 <html lang="en">
 <head>
   <script src="../js/script.js"></script>
@@ -14,14 +29,14 @@
   <span style="font-size: 44px" class="project-name">PixelSyntax</span>
 
   <span class="left-slider">
-                <a href="homepage.html" class="sidebar-btn" >Home</a>
-                <a href="buttons.html" class="sidebar-btn">Buttons</a>
-                <a href="checkboxes.html" class="sidebar-btn" style="padding-top: 25px;padding-bottom: 25px;border-radius: 50px;transform: scale(1.1);box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);">CheckBoxes</a>
-                <a href="togleswitches.html" class="sidebar-btn">Toggle Switches</a>
-                <a href="cards.html" class="sidebar-btn">Cards</a>
-                <a href="Loaders.html" class="sidebar-btn">Loaders</a>
-                <a href="inputs.html" class="sidebar-btn">Inputs</a>
-                <a href="radio.html" class="sidebar-btn">Radio Buttons</a>
+                <a href="homepage.php" class="sidebar-btn" >Home</a>
+                <a href="buttons.php" class="sidebar-btn">Buttons</a>
+                <a href="checkboxes.php" class="sidebar-btn" style="padding-top: 25px;padding-bottom: 25px;border-radius: 50px;transform: scale(1.1);box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);">CheckBoxes</a>
+                <a href="togleswitches.php" class="sidebar-btn">Toggle Switches</a>
+                <a href="cards.php" class="sidebar-btn">Cards</a>
+                <a href="Loaders.php" class="sidebar-btn">Loaders</a>
+                <a href="inputs.php" class="sidebar-btn">Inputs</a>
+                <a href="radio.php" class="sidebar-btn">Radio Buttons</a>
 
 
             </span>
