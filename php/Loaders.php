@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$html_code = "";
+$css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
@@ -9,6 +11,31 @@ else{
     exit;
 
 }
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "projectweb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['item_id'])) {
+    $id = $_POST['item_id'];
+
+    $stmt = $conn->prepare("SELECT HTML, CSS FROM loaders WHERE id = ?");
+    $stmt->bind_param("i", $id); // assuming id is integer
+    $stmt->execute();
+    $stmt->bind_result($html_code, $css_code);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+$conn->close();
+
 ?>
 
 
@@ -18,7 +45,7 @@ else{
 <head>
   <script src="../js/script.js"></script>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Loaders</title>
   <link rel="stylesheet" href="../css/unifid.css">
   <link rel="stylesheet" href="../css/buttons.css">
   <link rel="stylesheet" href="../css/loaders.css">
@@ -51,7 +78,21 @@ else{
 </div>
 
 <div class="body_2">
-  <button class="copy_2">Back</button>
+    <div class="code">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
+                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
+                </td>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
+                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button class="copy_2">Back</button>
 </div>
 <div class="body_1">
   <div class="main">
@@ -61,7 +102,6 @@ else{
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by Nawsome -->
           <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
             <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
             <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
@@ -74,9 +114,12 @@ else{
         </div>
         <div class="card">
 
+            <form action="Next.php" method="post">
 
-          <button class="copy_1">Next</button>
+                <input type="hidden" name="item_id" value="1">
+                <button class="copy_1" type="submit">Next</button>
 
+            </form>
 
         </div>
 
@@ -89,7 +132,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Pradeepsaranbishnoi -->
           <div class="🤚">
             <div class="👉"></div>
             <div class="👉"></div>
@@ -104,7 +146,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="2">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -119,7 +168,6 @@ else{
 
         <div class="button_me">
 
-          <!-- From Uiverse.io by terenceodonoghue -->
           <div class="third_load">
             <span></span>
             <span></span>
@@ -131,7 +179,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="3">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -142,7 +197,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Hashir-Ahmed123 -->
           <div class="lava-lamp">
             <div class="bubble"></div>
             <div class="bubble1"></div>
@@ -155,13 +209,19 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="4">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by Nawsome -->
           <svg class="pl_5" viewBox="0 0 160 160" width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
@@ -234,14 +294,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="5">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Smit-Prajapati -->
           <div class="loader6">
             <div class="box"></div>
             <div class="box"></div>
@@ -257,14 +323,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="6">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Z4drus -->
           <div class="loader7">
             <div class="loader__inner"></div>
             <div class="loader__orbit">
@@ -281,7 +353,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="7">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -293,7 +372,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by mobinkakei -->
           <div class="loader8">
             <svg viewBox="0 0 80 80">
               <circle r="32" cy="40" cx="40" id="test"></circle>
@@ -318,14 +396,21 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="8">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by SelfMadeSystem -->
+
           <div class="loader9">
             <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
               <defs class="s-xJBuHA073rTt" xmlns="http://www.w3.org/2000/svg">
@@ -365,7 +450,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="9">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -380,7 +472,7 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Nawsome -->
+
           <div class="pl10">
             <div class="pl__dot"></div>
             <div class="pl__dot"></div>
@@ -402,7 +494,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="10">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -417,7 +516,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by AnnaVAnTiM -->
           <svg
                   class="pencil"
                   viewBox="0 0 200 200"
@@ -511,7 +609,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="11">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -522,7 +627,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Z4drus -->
           <div class="loader12">
             <svg
                     preserveAspectRatio="xMidYMid meet"
@@ -556,14 +660,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="12">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Nawsome -->
           <div class="semicircle">
             <div>
               <div>
@@ -589,7 +699,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="13">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -598,7 +715,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by fanishah -->
           <svg class="gegga">
             <defs>
               <filter id="gegga">
@@ -629,7 +745,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="14">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -641,7 +764,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by iamrippon -->
           <div class="loader15"></div>
 
 
@@ -650,7 +772,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="15">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -658,7 +787,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Vazafirst -->
           <div class="page">
             <div class="container16">
               <div class="ring"></div>
@@ -673,7 +801,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="16">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -684,7 +819,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by zanina-yassine -->
           <div id="container17">
             <label class="loading-title">Loading ...</label>
             <span class="loading-circle sp1">
@@ -699,14 +833,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="17">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by omriluz -->
           <div class="container18">
             <div class="loader18"><span></span></div>
             <div class="loader18"><span></span></div>
@@ -719,7 +859,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="18">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -727,7 +874,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by 00Kubi -->
           <div class="solar-system">
             <div class="sun">
               <div class="corona"></div>
@@ -771,7 +917,13 @@ else{
         </div>
         <div class="card">
 
-          <button class="copy_1">Next</button>
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="19">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
 
@@ -781,7 +933,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Cksunandh -->
           <div class="cssloader">
             <div class="triangle1"></div>
             <div class="triangle2"></div>
@@ -794,7 +945,13 @@ else{
         </div>
         <div class="card">
 
-          <button class="copy_1">Next</button>
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="20">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
 

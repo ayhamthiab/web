@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$html_code = "";
+$css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
@@ -9,6 +11,31 @@ else{
     exit;
 
 }
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "projectweb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['item_id'])) {
+    $id = $_POST['item_id'];
+
+    $stmt = $conn->prepare("SELECT HTML, CSS FROM radio WHERE id = ?");
+    $stmt->bind_param("i", $id); // assuming id is integer
+    $stmt->execute();
+    $stmt->bind_result($html_code, $css_code);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+$conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +75,20 @@ else{
     <h2 class="b_b_headtext">Open-Source Radio Button's made with HTML and CSS </h2>
 </div>
 <div class="body_2">
+    <div class="code">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
+                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
+                </td>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
+                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
     <button class="copy_2">Back</button>
 </div>
 
@@ -60,7 +101,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Saiyed-Tanvir -->
                     <div class="container">
                         <div class="pane">
                             <label class="label">
@@ -85,9 +125,12 @@ else{
                 </div>
                 <div class="card">
 
+                    <form action="Next.php" method="post">
 
-                    <button class="copy_1">Next</button>
+                        <input type="hidden" name="item_id" value="1">
+                        <button class="copy_1" type="submit">Next</button>
 
+                    </form>
 
                 </div>
 
@@ -120,7 +163,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="2">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -136,7 +186,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Admin12121 -->
                     <div class="menu">
                         <a href="#" class="link">
     <span class="link-icon">
@@ -320,7 +369,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="3">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -332,7 +388,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by chase2k25 -->
                     <div class="forth_radio-input">
                         <div class="switch-panel">
                             <div class="track-groove"></div>
@@ -386,14 +441,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="4">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by mahiatlinux -->
                     <div class="fifth_radio-inputs">
                         <label>
                             <input class="fifth_radio-input" type="radio" name="engine" />
@@ -509,14 +570,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="5">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by FH638 -->
                     <div class="sixth_input">
                         <button class="sixth_value">
                             <svg
@@ -586,7 +653,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="6">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
@@ -594,7 +668,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by Smit-Prajapati -->
                     <div class="seventh_radio-container">
                         <input checked="" id="radio-free" name="radio" type="radio" />
                         <label for="radio-free">Free</label>
@@ -613,7 +686,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="7">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -626,7 +706,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by 3bdel3ziz-T -->
                     <section>
                         <label title="home" for="home" class="label">
                             <input id="home" name="page" type="radio" checked="" />
@@ -699,7 +778,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="8">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
@@ -708,7 +794,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by escannord -->
                     <div class="ninth_radio-input">
                         <input value="value-1" name="value-radio" id="value-1" type="radio" />
                         <label for="value-1">
@@ -740,7 +825,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="9">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -755,7 +847,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by SivarajRathinam -->
                     <div class="accordion">
                         <div class="accordion-item">
                             <input type="radio" id="section1" name="accordion" />
@@ -836,7 +927,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="10">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -851,7 +949,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Yaya12085 -->
                     <div class="radio-input11">
                         <div class="info11">
                             <span class="question">What does CSS stand for?</span>
@@ -873,7 +970,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="11">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
@@ -884,7 +988,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Zain-Muhammad -->
                     <div class="article-feedback-container">
                         <div class="article-feedback-heading">PixelSyntax is helpful?</div>
                         <div class="article-feedback-heading" style="font-size: 10px">Hint : The answer is always yes</div>
@@ -904,14 +1007,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="12">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by german_7619 -->
                     <div class="radio-inputs13">
                         <label class="radio13">
                             <input type="radio" name="radio" checked="" />
@@ -976,7 +1085,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="13">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -985,7 +1101,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by _7754 -->
                     <div class="feedback">
                         <label class="angry">
                             <input name="feedback" value="1" type="radio" />
@@ -1042,7 +1157,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="14">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -1055,7 +1177,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by chase2k25 -->
                     <div class="fan-speed-knob">
                         <div class="wrapper">
                             <div class="knob-outer">
@@ -1105,7 +1226,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="15">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
@@ -1114,7 +1242,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by m1her -->
                     <div class="radio-input16">
                         <div class="center"></div>
                         <label class="label16 spring">
@@ -1141,7 +1268,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="16">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -1153,7 +1287,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by it12uw -->
                     <div class="radio17">
                         <input
                                 label="Yes"
@@ -1179,7 +1312,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="17">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
@@ -1187,7 +1327,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by InfinityLoopGames -->
                     <div class="container17">
                         <div class="radio-wrapper">
                             <input type="radio" id="value-1111" name="btn" class="input17">
@@ -1225,7 +1364,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="18">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
@@ -1234,7 +1380,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by aadium -->
                     <label id="topleft" class="container19">
                         <input name="my-radio-button" type="radio">
                         <label id="tl" style="font-size: 15px ; font-weight: bold " >Ayham</label>
@@ -1268,7 +1413,13 @@ else{
                 </div>
                 <div class="card">
 
-                    <button class="copy_1">Next</button>
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="19">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
 
@@ -1278,7 +1429,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Yaya12085 -->
                     <div class="radio-input20">
                         <input checked="" value="color-1" name="color" id="color-1" type="radio">
                         <label for="color-1">
@@ -1308,7 +1458,13 @@ else{
                 </div>
                 <div class="card">
 
-                    <button class="copy_1">Next</button>
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="20">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
 

@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$html_code = "";
+$css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
@@ -9,6 +11,31 @@ else{
     exit;
 
 }
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "projectweb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['item_id'])) {
+    $id = $_POST['item_id'];
+
+    $stmt = $conn->prepare("SELECT HTML, CSS FROM togleswitches WHERE id = ?");
+    $stmt->bind_param("i", $id); // assuming id is integer
+    $stmt->execute();
+    $stmt->bind_result($html_code, $css_code);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+$conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +43,7 @@ else{
 <head>
   <script src="../js/script.js"></script>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Toggle Switches</title>
   <link rel="stylesheet" href="../css/unifid.css">
   <link rel="stylesheet" href="../css/buttons.css">
   <link rel="stylesheet" href="../css/checkboxes.css">
@@ -49,7 +76,21 @@ else{
   <h2 class="b_b_headtext">Open-Source togle switches  made with HTML and CSS </h2>
 </div>
 <div class="body_2">
-  <button class="copy_2">Back</button>
+    <div class="code">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
+                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
+                </td>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
+                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button class="copy_2">Back</button>
 </div>
 
 <div class="body_1">
@@ -58,7 +99,6 @@ else{
     <div class="section" >
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by r7chardgh -->
           <label class="switch_1">
             <input class="cb" type="checkbox" />
             <span class="toggle">
@@ -70,15 +110,17 @@ else{
         </div>
         <div class="card">
 
+            <form action="Next.php" method="post">
 
-          <button class="copy_1">Next</button>
+                <input type="hidden" name="item_id" value="1">
+                <button class="copy_1" type="submit">Next</button>
 
+            </form>
 
         </div>
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by Praashoo7 -->
           <label class="switch_2">
             <input type="checkbox" class="chk">
             <span class="slider"></span>
@@ -86,13 +128,19 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="2">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
 
         <div class="button_me">
-          <!-- From Uiverse.io by catraco -->
           <div class="acontainera">
             <label class="alabela">
               <input type="checkbox" class="ainputa" />
@@ -121,7 +169,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="3">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -143,7 +198,6 @@ else{
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by Galahhad -->
           <label class="theme-switch">
             <input type="checkbox" class="theme-switch__checkbox">
             <div class="theme-switch__container">
@@ -166,7 +220,14 @@ else{
           </label>
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="4">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -201,12 +262,18 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="5">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by barisdogansutcu -->
           <div class="love">
             <input id="switch" type="checkbox">
             <label class="love-heart" for="switch">
@@ -224,12 +291,18 @@ else{
 
 
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="6">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by JkHuger -->
           <div class="containeraaa">
             <input class="label-checkaaa" id="label-checkaaa" type="checkbox">
             <label for="label-checkaaa" class="hamburger-labelaaa">
@@ -244,7 +317,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="7">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -255,7 +335,6 @@ else{
 
         <div class="button_me">
 
-          <!-- From Uiverse.io by MuhammadHasann -->
           <div class="toggle-cont">
             <input class="toggle-input" id="toggle" name="toggle" type="checkbox" />
             <label class="toggle-label" for="toggle">
@@ -269,13 +348,19 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="8">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by Mohsinech -->
           <div class="containeraaaa">
             <div class="toggleaaaa">
               <span></span>
@@ -289,7 +374,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="9">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -303,7 +395,6 @@ else{
 
         <div class="button_me">
 
-          <!-- From Uiverse.io by barisdogansutcu -->
           <input
                   value="bfavorite-button"
                   name="bfavorite-checkbox"
@@ -336,7 +427,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="10">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -361,7 +459,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="11">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -376,7 +481,6 @@ else{
 
 
 
-          <!-- From Uiverse.io by Praashoo7 -->
           <label class="switchbbb">
             <input class="chk_85bbb" type="checkbox">
             <span class="sliderbbb">
@@ -395,7 +499,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="12">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -410,7 +521,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="13">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -427,14 +545,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="14">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by csemszepp (Class names changed with "deab") -->
           <input id="checkboxccc" type="checkbox">
           <label class="switchccc" for="checkboxccc">
             <svg viewBox="0 0 448 512" class="svgccc">
@@ -446,14 +570,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="15">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by JaydipPrajapati1910 -->
           <div class="btn-container">
 
             <label class="switch btn-color-mode-switch">
@@ -465,7 +595,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="16">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -510,13 +647,19 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="17">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by pandey_saurav_ -->
           <div>
             <input id="checkbox-inputdd" type="checkbox" />
             <label class="switchdd" for="checkbox-inputdd">
@@ -545,7 +688,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="18">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -581,7 +731,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="19">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -589,7 +746,6 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by Danishrehman786 -->
           <div class="togglee-containere">
             <input class="togglee-inpute" id="togglee" type="checkbox" />
             <label class="togglee-labele" for="togglee">
@@ -606,7 +762,13 @@ else{
         </div>
         <div class="card">
 
-          <button class="copy_1">Next</button>
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="20">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
 

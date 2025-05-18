@@ -1,10 +1,8 @@
-
-
-
-
-<!DOCTYPE html><?php
+<?php
 session_start();
 
+$html_code = "";
+$css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
@@ -13,12 +11,41 @@ else{
     exit;
 
 }
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "projectweb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['item_id'])) {
+    $id = $_POST['item_id'];
+
+    $stmt = $conn->prepare("SELECT HTML, CSS FROM checkboxes WHERE id = ?");
+    $stmt->bind_param("i", $id); // assuming id is integer
+    $stmt->execute();
+    $stmt->bind_result($html_code, $css_code);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+$conn->close();
+
 ?>
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <script src="../js/script.js"></script>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Check Boxes</title>
   <link rel="stylesheet" href="../css/unifid.css">
   <link rel="stylesheet" href="../css/buttons.css">
   <link rel="stylesheet" href="../css/checkboxes.css">
@@ -51,7 +78,21 @@ else{
 </div>
 
 <div class="body_2">
-  <button class="copy_2">Back</button>
+    <div class="code">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
+                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
+                </td>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
+                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button class="copy_2">Back</button>
 </div>
 <div class="body_1">
   <div class="main">
@@ -59,7 +100,7 @@ else{
     <div class="section" >
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by SelfMadeSystem -->
+
           <label class="container">
             <input type="checkbox">
             <svg viewBox="0 0 64 64" height="2em" width="2em">
@@ -69,15 +110,18 @@ else{
         </div>
         <div class="card">
 
+            <form action="Next.php" method="post">
 
-          <button class="copy_1">Next</button>
+                <input type="hidden" name="item_id" value="1">
+                <button class="copy_1" type="submit">Next</button>
 
+            </form>
 
         </div>
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by JkHuger -->
+
           <div id="checklist">
             <input checked="" value="1" name="r" type="checkbox" id="01">
             <label for="01">Bread</label>
@@ -88,13 +132,20 @@ else{
           </div>
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="2">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
 
         <div class="button_me">
-          <!-- From Uiverse.io by catraco -->
+
           <div class="heart-container" title="Like">
             <input type="checkbox" class="checkbox" id="Give-It-An-Id">
             <div class="svg-container">
@@ -118,7 +169,14 @@ else{
           </div>
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="3">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -140,7 +198,7 @@ else{
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by Cevorob -->
+
           <label class="burger" for="burger">
             <input type="checkbox" id="burger">
             <span></span>
@@ -149,13 +207,20 @@ else{
           </label>
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="4">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by catraco -->
+
           <label class="container">
             <input checked="checked" type="checkbox">
             <svg viewBox="0 0 640 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="microphone-slash"><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L472.1 344.7c15.2-26 23.9-56.3 23.9-88.7V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 21.2-5.1 41.1-14.2 58.7L416 300.8V96c0-53-43-96-96-96s-96 43-96 96v54.3L38.8 5.1zM344 430.4c20.4-2.8 39.7-9.1 57.3-18.2l-43.1-33.9C346.1 382 333.3 384 320 384c-70.7 0-128-57.3-128-128v-8.7L144.7 210c-.5 1.9-.7 3.9-.7 6v40c0 89.1 66.2 162.7 152 174.4V464H248c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H344V430.4z"></path></svg>
@@ -166,7 +231,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="5">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -190,7 +262,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="6">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -225,7 +304,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="7">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -236,7 +322,7 @@ else{
 
         <div class="button_me">
 
-          <!-- From Uiverse.io by KSAplay -->
+
           <label class="container_2">
             <div class="simple-text">Click me!</div>
             <input checked="checked" type="checkbox" />
@@ -306,7 +392,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="8">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -386,7 +479,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="9">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -417,7 +517,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="10">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
@@ -431,7 +538,7 @@ else{
 
         <div class="button_me">
 
-          <!-- From Uiverse.io by andrew-demchenk0 (Class names changed) -->
+
           <label class="custom-checkbox-container">
             <input type="checkbox">
             <svg id="custom-icon" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -446,7 +553,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="11">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
@@ -461,7 +575,6 @@ else{
 
 
 
-          <!-- Custom animated checkbox with bounce effect -->
           <div class="bounce-checkbox-wrapper">
             <input type="checkbox" id="bounceCheckbox" class="bounce-checkbox-input" />
             <label for="bounceCheckbox" class="bounce-checkbox-label">
@@ -471,13 +584,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="12">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by Omar-Molotov (Class names changed with "ayham") -->
+
           <label class="ayham-container">
             <input type="checkbox" checked="checked" />
             <svg
@@ -506,12 +626,19 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="13">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by gaganaayi_6882 -->
+
           <div class="c_body">
           <input class="dial-checkbox" type="checkbox" />
           </div>
@@ -519,14 +646,21 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="14">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by csemszepp (Class names changed with "deab") -->
+
           <div class="deab-container">
             <label>
               <input class="deab-play-btn" type="checkbox">
@@ -537,14 +671,21 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="15">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
 
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by taieb1919 -->
+
           <div class="customCheckBoxHolder">
             <input class="customCheckBoxInput" id="cCB1" type="checkbox" />
             <label class="customCheckBoxWrapper" for="cCB1">
@@ -570,13 +711,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="16">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
       <article class="square">
         <div class="button_me">
-          <!-- From Uiverse.io by LeonKohli -->
+
           <div class="uv-checkbox-wrapper">
             <input type="checkbox" id="uv-checkbox" class="uv-checkbox" />
             <label for="uv-checkbox" class="uv-checkbox-label">
@@ -595,13 +743,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="17">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by ElsayedShamsEldeen (Class names updated with "ayhamdeab") -->
+
           <label class="ayhamdeab-container">
             <input checked="checked" type="checkbox" />
             <svg
@@ -632,13 +787,20 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="18">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
       <article class="square">
         <div class="button_me">
 
-          <!-- From Uiverse.io by JkHuger (All names updated to ayhamdeab_1) -->
+
           <div class="ayhamdeab_1-wrapper">
             <input class="ayhamdeab_1-hidden-trigger" id="ayhamdeab_1-toggle" type="checkbox">
             <label class="ayhamdeab_1-circle" for="ayhamdeab_1-toggle">
@@ -685,7 +847,14 @@ else{
 
         </div>
         <div class="card">
-          <button class="copy_1">Next</button>
+
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="19">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
 
       </article>
@@ -693,7 +862,7 @@ else{
         <div class="button_me">
 
 
-          <!-- From Uiverse.io by 3HugaDa3 - Edited by ayhamdeab_2 -->
+
           <label class="checkbox-wrapper_ayhamdeab_2">
             <input type="checkbox" />
             <div class="checkmark_ayhamdeab_2">
@@ -713,7 +882,13 @@ else{
         </div>
         <div class="card">
 
-          <button class="copy_1">Next</button>
+            <form action="Next.php" method="post">
+
+                <input type="hidden" name="item_id" value="20">
+                <button class="copy_1" type="submit">Next</button>
+
+            </form>
+
         </div>
       </article>
 

@@ -13,6 +13,8 @@ if ($conn->connect_error) {
 
 
 $message = "";
+$message2 = "";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
@@ -32,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("sss", $name, $email, $password);
 
         if ($stmt->execute()) {
-            $message = "The account has been created successfully. You can Log in now. ✅";
+            $message2 = 'The account has been created successfully.<br>You can log in now. ✅';
         }
     }
 }
@@ -75,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         window.onload = function () {
-            showFormd('Login-id');
+            showFormd('Signup-id');
         }
     </script>
 
@@ -148,6 +150,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if (!empty($message)) : ?>
             <div style="color: red; font-weight: bold; margin: 0px 0;">
                 <?= $message ?>
+            </div>
+        <?php endif; ?>
+        <?php if (!empty($message2)) : ?>
+            <div style="color: green; font-weight: bold; margin: 0px 0; font-size: 15px">
+                <?= $message2 ?>
             </div>
         <?php endif; ?>
 

@@ -12,7 +12,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$message = "";
+$message1 = "";
+$message2 = "";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST['email']) ? $_POST['email'] : '';
@@ -31,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../php/homepage.php");
             exit();
         } else {
-            $message = "Incorrect password ❗";
+            $message1 = "Incorrect password ❗";
         }
     } else {
-        $message = "No user found with this email. ❗";
+        $message2 = "No user found with this email. ❗";
     }
 }
 ?>
@@ -125,9 +127,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="../php/Login.php" method="post" id="Login-id">
         <span style="font-size: 50px;font-weight: bold ; padding: 10px">Login</span>
 
-        <?php if (!empty($message)) : ?>
+        <?php if (!empty($message2)) : ?>
             <div style="color: red; font-weight: bold; margin: 0px 0;">
-                <?= $message ?>
+                <?= $message2 ?>
             </div>
         <?php endif; ?>
 
@@ -137,8 +139,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="email" id="email" name="email" required>
         </div>
         <div class="row">
+
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
+            <?php if (!empty($message1)) : ?>
+                <div style="color: red; font-weight: bold; margin: 0px 0;">
+                    <?= $message1 ?>
+                </div>
+            <?php endif; ?>
+
         </div>
 
         <button class="submit" type="submit">Log In</button>

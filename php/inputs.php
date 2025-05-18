@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$html_code = "";
+$css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
@@ -9,6 +11,31 @@ else{
     exit;
 
 }
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "projectweb";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['item_id'])) {
+    $id = $_POST['item_id'];
+
+    $stmt = $conn->prepare("SELECT HTML, CSS FROM inputs WHERE id = ?");
+    $stmt->bind_param("i", $id); // assuming id is integer
+    $stmt->execute();
+    $stmt->bind_result($html_code, $css_code);
+    $stmt->fetch();
+    $stmt->close();
+}
+
+$conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +43,7 @@ else{
 <head>
     <script src="../js/script.js"></script>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Inputs</title>
     <link rel="stylesheet" href="../css/unifid.css">
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/inputs.css">
@@ -49,6 +76,20 @@ else{
 </div>
 
 <div class="body_2">
+    <div class="code">
+        <table>
+            <tr>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
+                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
+                </td>
+                <td>
+                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
+                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
     <button class="copy_2">Back</button>
 </div>
 <div class="body_1">
@@ -60,7 +101,7 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by 0xnihilism -->
+
                     <div class="brutalist-container">
                         <input
                                 placeholder="TYPE HERE"
@@ -76,9 +117,12 @@ else{
                 </div>
                 <div class="card">
 
+                    <form action="Next.php" method="post">
 
-                    <button class="copy_1">Next</button>
+                        <input type="hidden" name="item_id" value="1">
+                        <button class="copy_1" type="submit">Next</button>
 
+                    </form>
 
                 </div>
 
@@ -88,7 +132,7 @@ else{
             </article>
 
             <article class="square">
-                <div class="button_me"><!-- From Uiverse.io by FColombati -->
+                <div class="button_me">
                     <div class="rangeWrapper">
                         <input value="7" max="20" min="1" class="kawaii" type="range" />
                         <input
@@ -110,7 +154,14 @@ else{
                     </div>
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="2">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -123,7 +174,7 @@ else{
 
             <article class="square">
 
-                <div class="button_me"><!-- From Uiverse.io by Lakshay-art -->
+                <div class="button_me">
                     <div class="grid"></div>
                     <div id="poda">
                         <div class="glow"></div>
@@ -194,7 +245,14 @@ else{
                     </div>
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="3">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -205,7 +263,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by OmarN6 -->
                     <form action="" class="container">
                         <div class="input-container">
                             <div class="input-content">
@@ -225,14 +282,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="4">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Novaxlo -->
                     <div class="futuristic-input">
                         <div class="futuristic-input-space">
                             <div class="futuristic-input-space-2"></div>
@@ -277,14 +340,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="5">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Novaxlo -->
                     <div class="input-add-friend">
                         <div class="input-add-friend-title"><p>Add a friend</p></div>
                         <div class="input-add-friend-input">
@@ -332,14 +401,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="6">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Ma7moud344 -->
                     <div class="container7">
                         <div class="folder">
                             <div class="top"></div>
@@ -357,7 +432,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="7">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -370,7 +452,6 @@ else{
 
 
 
-                    <!-- From Uiverse.io by 0xnihilism -->
                     <div class="input-wrapper">
                         <input class="input" name="text" placeholder="Type here..." type="text" />
                     </div>
@@ -383,7 +464,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="8">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
@@ -391,14 +479,20 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by absoluteSTrange -->
                     <input class="inp" placeholder="Search The Matrix">
 
 
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="9">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -412,7 +506,6 @@ else{
 
                 <div class="button_me">
 
-                    <!-- From Uiverse.io by hexday -->
                     <div class="aacard">
                         <div class="terminal">
                             <div class="terminal-header">
@@ -453,7 +546,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="10">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -468,7 +568,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by kamehame-ha -->
                     <div class="input-container11">
                         <p class="bash-text">
                             <span class="user">user</span><span class="vm">@ui-verse</span>:<span class="char">~</span>$
@@ -481,7 +580,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="11">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
@@ -492,7 +598,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Li-Deheng -->
                     <div class="info-panels">
                         <div class="input-color-group-one">
                             <input class="input-color" autocomplete="on" name="text" type="text" required="" placeholder="255, 255, 255, 0.5">
@@ -507,14 +612,20 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="12">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by Galahhad -->
                     <div class="ui-wrapper11">
                         <input checked="" id="Palestine" name="flag" type="radio">
                         <input id="Belgium" name="flag" type="radio">
@@ -599,7 +710,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="13">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -608,7 +726,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by abdullah-sameh -->
                     <div class="input-container14">
                         <input id="input14" name="text" type="text">
                         <label class="label14" for="input14">Enter Your Name</label>
@@ -619,7 +736,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="14">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -631,7 +755,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by zymantas-katinas -->
                     <button class="button15">
                         <span class="shadow"></span>
                         <span class="edge"></span>
@@ -652,20 +775,33 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="15">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
             <article class="square">
                 <div class="button_me">
 
-                    <!-- From Uiverse.io by Codewithvinay -->
                     <input type="text" autocomplete="off" placeholder="Type your text" name="text" class="input16">
 
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="16">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
 
@@ -676,7 +812,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by EddyBel -->
                     <div class="input__container17">
                         <label class="input__label17">Username</label>
                         <input placeholder="Enter your username" class="input17" name="text" type="text">
@@ -687,13 +822,19 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="17">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
             <article class="square">
                 <div class="button_me">
 
-                    <!-- From Uiverse.io by reglobby -->
                     <div class="input-container18">
                         <div class="input-field-container">
                             <input type="text" class="holo-input" placeholder="John" />
@@ -783,7 +924,14 @@ else{
 
                 </div>
                 <div class="card">
-                    <button class="copy_1">Next</button>
+
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="18">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
 
             </article>
@@ -791,7 +939,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by 0xnihilism -->
                     <div class="input-container19">
                         <input
                                 class="input19"
@@ -807,7 +954,13 @@ else{
                 </div>
                 <div class="card">
 
-                    <button class="copy_1">Next</button>
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="19">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
 
@@ -817,7 +970,6 @@ else{
                 <div class="button_me">
 
 
-                    <!-- From Uiverse.io by EddyBel -->
                     <div class="input__container20">
                         <div class="shadow__input"></div>
                         <button class="input__button__shadow">
@@ -833,7 +985,13 @@ else{
                 </div>
                 <div class="card">
 
-                    <button class="copy_1">Next</button>
+                    <form action="Next.php" method="post">
+
+                        <input type="hidden" name="item_id" value="20">
+                        <button class="copy_1" type="submit">Next</button>
+
+                    </form>
+
                 </div>
             </article>
 
