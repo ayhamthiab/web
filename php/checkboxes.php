@@ -111,7 +111,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="1">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -134,7 +134,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="2">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -171,7 +171,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="3">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -209,7 +209,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="4">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -233,7 +233,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="5">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -264,7 +264,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="6">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -306,7 +306,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="7">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -394,7 +394,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="8">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -481,7 +481,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="9">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -519,7 +519,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="10">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -555,7 +555,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="11">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -586,7 +586,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="12">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -628,7 +628,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="13">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -648,7 +648,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="14">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -673,7 +673,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="15">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -713,7 +713,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="16">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -745,7 +745,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="17">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -789,7 +789,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="18">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -849,7 +849,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="19">
                 <button class="copy_1" type="submit">Next</button>
 
@@ -883,7 +883,7 @@ $conn->close();
         <div class="card">
 
             <form action="Next.php" method="post">
-
+                <input type="hidden" name="target_table" value="checkboxes">
                 <input type="hidden" name="item_id" value="20">
                 <button class="copy_1" type="submit">Next</button>
 
