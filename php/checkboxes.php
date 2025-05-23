@@ -53,7 +53,7 @@ $conn->close();
 
 <header class="header">
 
-  <span style="font-size: 44px" class="project-name">PixelSyntax</span>
+    <span style="font-size: 42px" class="project-name">PixelSyntax</span>
 
   <span class="left-slider">
                 <a href="homepage.php" class="sidebar-btn" >Home</a>
@@ -64,7 +64,7 @@ $conn->close();
                 <a href="Loaders.php" class="sidebar-btn">Loaders</a>
                 <a href="inputs.php" class="sidebar-btn">Inputs</a>
                 <a href="radio.php" class="sidebar-btn">Radio Buttons</a>
-
+                <a href="creat.php" class="sidebar-btn">Creat</a>
 
             </span>
 </header>

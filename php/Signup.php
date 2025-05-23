@@ -135,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <button class="submit" type="submit">Log In</button>
+        <div><br></div>
 
         <br>
         <span style="font-size: 20px ; font-weight: bold">Don't have an account?</span>
@@ -173,6 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <button class="submit" type="submit">Create Account</button>
+        <div><br></div>
 
         <br>
         <span style="font-size: 20px ; font-weight: bold">Already have an account?</span>

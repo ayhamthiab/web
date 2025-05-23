@@ -53,7 +53,7 @@ $conn->close();
 
 <header class="header">
 
-  <span style="font-size: 44px" class="project-name">PixelSyntax</span>
+    <span style="font-size: 42px" class="project-name">PixelSyntax</span>
 
   <span class="left-slider">
                 <a href="homepage.php" class="sidebar-btn" >Home</a>
@@ -64,6 +64,7 @@ $conn->close();
                 <a href="Loaders.php" class="sidebar-btn " style="padding-top: 25px;padding-bottom: 25px;border-radius: 50px;transform: scale(1.1);box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);">Loaders</a>
                 <a href="inputs.php" class="sidebar-btn">Inputs</a>
                 <a href="radio.php" class="sidebar-btn">Radio Buttons</a>
+                <a href="creat.php" class="sidebar-btn">Creat</a>
 
 
             </span>
@@ -77,21 +78,6 @@ $conn->close();
   <h2 class="b_b_headtext">Open-Source Loader's made with HTML and CSS </h2>
 </div>
 
-<div class="body_2">
-    <div class="code">
-        <table>
-            <tr>
-                <td>
-                    <h1 style="color: #ffffff ; text-align: center">HTML</h1>
-                    <textarea class="html_code" name="html_code" id="html_code" cols="500" readonly><?php echo htmlspecialchars($html_code); ?></textarea>
-                </td>
-                <td>
-                    <h1 style="color: #ffffff ; text-align: center">CSS</h1>
-                    <textarea class="css_code" name="css_code" id="css_code" cols="500" readonly><?php echo htmlspecialchars($css_code); ?></textarea>
-                </td>
-            </tr>
-        </table>
-    </div>
     <button class="copy_2">Back</button>
 </div>
 <div class="body_1">
