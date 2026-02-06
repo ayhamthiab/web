@@ -5,31 +5,6 @@ This module handles the training of machine learning models for major recommenda
 """
 
 
-
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
-from sklearn.multiclass import OneVsRestClassifier
-from sklearn.metrics import (
-    accuracy_score,
-    precision_score,
-    recall_score,
-    f1_score,
-    top_k_accuracy_score,
-    classification_report,
-    make_scorer,
-)
-from sklearn.utils.class_weight import compute_class_weight
-
-from utils import (
-    ROOT, DATA_DIR, RAW_DIR, PROC_DIR, INTERIM_DIR,
-    MODELS_DIR, OUTPUTS_DIR, RECS_DIR,
-    ensure_dirs, set_seed, load_json, save_json,
-    save_model, load_model, find_column
-)
-
 # =========================================================
 # Data loading / splitting / preprocessing
 # =========================================================
