@@ -9,13 +9,13 @@ This module handles the training of machine learning models for major recommenda
 # Data loading / splitting / preprocessing
 # =========================================================
 
-def load_ml_dataset() -> pd.DataFrame:
+f load_ml_dataset() -> pd.DataFrame:
     """Load the machine learning dataset."""
     ml_df = pd.read_csv(PROC_DIR / "merged_dataset.csv")
     return ml_df
 
 
-def split_data(
+f split_data(
     df: pd.DataFrame,
     target_col: str = 'label',
     test_size: float = 0.1,
