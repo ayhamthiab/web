@@ -15,7 +15,7 @@ def load_ml_dataset() -> pd.DataFrame:
     return ml_df
 
 
-def split_data(
+wwf split_data(
     df: pd.DataFrame,
     target_col: str = 'label',
     test_size: float = 0.1,
