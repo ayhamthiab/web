@@ -4,15 +4,7 @@ Model training module for the Masarak University Recommendation System.
 This module handles the training of machine learning models for major recommendation.
 """
 
-import os
-from pathlib import Path
-from typing import Dict, List, Tuple, Any
 
-import warnings
-import json
-import joblib
-import numpy as np
-import pandas as pd
 
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
