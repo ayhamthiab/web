@@ -115,8 +115,5 @@ function checkAll() {
             // alert("Saved to database successfully!");
             hasRun = false;
         })
-        .catch(error => {
-            alert("Error saving to database.");
-            hasRun = false;
-        });
+    );
 }
