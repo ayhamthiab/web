@@ -15,7 +15,7 @@ f load_ml_dataset() -> pd.DataFrame:
     return ml_df
 
 
-f split_data(
+def split_data(
     df: pd.DataFrame,
     target_col: str = 'label',
     test_size: float = 0.1,
@@ -53,7 +53,7 @@ def preprocess_data(
     X_val_proc   = X_val.drop(columns=[c for c in drop_cols if c in X_val.columns]).copy()
     X_test_proc  = X_test.drop(columns=[c for c in drop_cols if c in X_test.columns]).copy()
 
-    for df in (X_train_proc, X_val_proc, X_test_proc):
+    r df in (X_train_proc, X_val_proc, X_test_proc):
         for col in df.columns:
             df[col] = pd.to_numeric(df[col], errors='coerce')
         df.replace([np.inf, -np.inf], np.nan, inplace=True)
