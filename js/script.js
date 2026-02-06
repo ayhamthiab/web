@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    backBtn.addEventListener('click', () => {
+    backBtn.adstener('click', () => {
         body2.style.zIndex = 1;
         body1.style.zIndex = 2;
     });
