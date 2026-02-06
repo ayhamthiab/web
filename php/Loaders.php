@@ -6,7 +6,7 @@ $css_code = "";
 if (isset($_SESSION['isLoggedIn'])  && $_SESSION['isLoggedIn']==1){
 
 }
-else{
+ese{
     header("location:../php/Login.php");
     exit;
 
